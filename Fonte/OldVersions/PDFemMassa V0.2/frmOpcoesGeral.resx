@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>127, 17</value>
+  </metadata>
+  <data name="chkIgnorarSalvar.ToolTip" xml:space="preserve">
+    <value>Esta opção faz com que o Inventor ignore apenas as
+mensagens "Deseja salvar o arquivo?".
+Muito cuidado! Caso você tenha um arquivo já aberto
+no Inventor e tenha feito alterações não-salvas nele, 
+esta opção NÃO VAI SALVAR as alterações feitas!</value>
+  </data>
+  <data name="chkSilentMode.ToolTip" xml:space="preserve">
+    <value>Esta opção, quando marcada, faz o Inventor operar
+em "Modo Silencioso", ou seja, nenhuma mensagem
+de erro será mostrada, e as respostas dadas a elas são
+as respostas padrão. 
+Algumas mensagens que serão ocultadas:
+   - Erro de peça com referência não resolvida
+   - Erro de gráficos DirectX
+   - Erro de desenho não-atualizado
+   - Pergunta "Deseja saltar arquivo" ao fechar o mesmo.</value>
+  </data>
+  <data name="chkPesquisaPrimeiro.ToolTip" xml:space="preserve">
+    <value>Ao marcar esta opção, o programa cessará
+a pesquisa do ítem no primeiro arquivo
+encontrado e já o acrescentará na lista de
+arquivos.
+Esta opção é útil para unidades de rede bem
+estruturadas, onde existe apenas um único
+arquivo com determinado nome.
+Caso esta opção esteja desmarcada, será exibida
+uma janela com os resultados encontrados.</value>
+  </data>
+  <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAA2
+        EQAAAk1TRnQBSQFMAgEBCgEAAcABAAHAAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAATADAAEBAQABCAYAAQwYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wwAAv8FAA3sJAAB/wHy
+        ARoBGwHzAfQB/wEAAXoBGgH/BAAB7An0Af8B9gHsIwAB/wHzAZkB/wH0BBoBWQGaARoB/wIAAf8BkQHw
+        AZEB8AGRB/AB7SIAAf8B9AHzAZkB/wL0AxsDWQGaAgABCQH3A5EBtQG7AvQE/wGSIgAB/wH0Af8BvAH/
+        AvQCGwEaA1kBeQEAAZEB9wEJA/cBuwG1AZEF8AHvIgAD/wEaAf8D9gEbARoDWQF5AQAB/wG7AZED9AH3
+        AZEB9AX/Ae8lAAEbAfQB/wL2ARsBegFZAXoBWQF5AQABkQG7AZECvAHwAfcCkQXwAe8mAAEbAf8B9gH/
+        AfYEegF5AQAB/wH0AZEC9AH/AfcBkQb/Ae8mAAEbA/8B9gF6AZoBegGaAXoBAAGRAbsB9AORArsBkQXw
+        Ae8mAAEbA/8B9gF6A5oBegIAAfQBuwH0ArsB9wHxBv8BByYAARsD/wH2AXoEmgMAAZEB8AGRAfABkQfw
+        AQcmAAEbA/8B9gF6AZoCoAGaAwABBwn/AfIB8QEHJgABGwP/AfYBegGaAsMBmgMAAQcI/wQHJgABGwT/
+        AfYDwwGaAwABBwH/AfIB8wH/AfIB8wH/AfIBBwH0AQcnAAPzAfQB9gH/AfYCwwGaAwABBwH/AQcB8QH/
+        AQcB8QH/AQcBvAEHKwAC/wL0AfMBGwEaAwACBwH0AgcB9AIHAfQBB3sAAvMnAAMJArsLCQYAAf8BswGt
+        Af8eAAEHBwABuwEJARkB2wLUArMCrQOzARkC3AYAArQBswG0Af8LAAMHDgABBwEQAQcGAAH/AbMD2gLU
+        AbIErAGzAtsB/wUAAQkEswG7CgABBwMQAQcMAAEHAxABBwYAAfMBrQLaAtQBsgOsArMB1AH0BQAB8AKz
+        Aa0BsgHUAa0B8wkAAQcDEAEHCwABBwUQAQcGAAEJAbMB2gLUAbIDrAKzARkFAAHzA7MBrAGyAdMB1AGt
+        Af8IAAEHAxABBwoAAQcHEAEHBQAB/wG0A9QBsgKsArMB3AYAAbQCswKsAbIB1AHaAdQBtAH/BwABBwMQ
+        AQcJAAEHCRABBwUAAf8BswLUAbIBrAOzAf8FAAG7ArMDrAGyAtQB2gGzAbsEAAEHCRABBwkAAQcDEAEH
+        CQAB8wGzAtQBswG0AbMB9AUAAfQBrQKzA6wBsgLUAtoBrQHzBAABBwcQAQcKAAEHAxABBwoAAQkBswHb
+        AQkBtAEZBQAB/wGzAdUBswSsAbIC1APaAa0B/wQAAQcFEAEHCwABBwMQAQcKAAH/ArQB2wG7BgAB3AGz
+        AdsDswKtArMD1AHaAbsBtAUAAQcDEAEHDAABBwMQAQcLAAH/ArMB/wYAAbsOtAG7BgABBwEQAQcOAAMH
+        DQAC8x4AAQeZAA3/BwAB9ARyAfQIAAFFAeMGAAFHAUYTAAHzAREBFQQTBhQBEwHsBgAB9AFPAS4BVQFP
+        AfQHAAEgAUcBRQFHBAABFwHpAUEBIBIAAesBbQHsAQ8B9wLvA/cB7wEVAQABDgEVBgAB9AFPATMBHQFV
+        AfQGAAMgAfkB6QEXAgABFwHpAfkCIAFGCQABCQG1AfAFAAHsAUMBkgHvAW0BQwEPAewBkgHtAfcBEwEO
+        AQ8BEwYAAfQBTwEzAR0BVQH0BQAB/wGUAyAB+QHpApMBHwH5AyABFwH/CAABCQHVAa0BCQQAAewBEAFD
+        AfcB7wFDAREBkgL3Ae8BEgEPARABEwYAAfQBTwEzAR0BVQH0BgAB/wUgAkYFIAH/CQAB3QEJAdQBzwQA
+        AewCEQEUAQcB7wERAfcC7wEHAeoCEQETAQAF9AHzAU8BLQEzAU8B8gX0AwABQAEgAh8CIAIfAiANAAHP
+        AdUBCQMAAewCQwEVAZIBBwHvAewCvAH3ARICEQESAQABcgFPBS4BAgEzAVUBTwFQAnIBTwFyBAABRgEg
+        AgEBHwEBAekBRg4AAQkBrQHVAwAB7ARDARQB9wHtAUMBFQRDARIBAAFyAQIBLQQzAS4BTwJVAVsC5AFW
+        AXIEAAGTAUYEHwEgAW4GAAStAYsBhgIAARkBrQHVAQkCAAHsAUMB7wPzAfEBBwGSAfcC8wG8ARQBEgEA
+        AXIBLgEzAVoC5AFbA1UCVgKXAnIDAAHqAiAEHwIgARMFAAG0Aa0B1AHVAbQBGQMAAa0BswEJAgAB7AFD
+        AfEB8gPxAfABBwH3AZIB8QHzARMB6gEAAXIBTwFVBJcBWwFVAZcGcgIAARMBIAH5AiACRwIgAfkBIAFD
+        BAABtAHUAtUBtAEJAwABrQHPAQkCAAHsARUB8QHyBPEB8AEHAfcBkgHzARIB6gEABfQB8gGXAX0B5AFy
+        AfMF9AEAAQ8BRgP5AUcB4wEXAUcD+QFGBAABtAPVAq0BtQIAAYsBrQEJAgAB7AEUAfEB8wXyAfECBwHw
+        ARIBbQYAAfQBlwF9AeQBcgH0BQAB9AG3AZQCFwEWAUYCAAFGARYCFwEWAW8B9AIAAdYCCQHcAbQCrQLP
+        AYsB1QEJAgAB7AEUAfIH9AHyAe8B9wHqAW0GAAH0AZcB5AGXAXIB9AYAAfMBRQK9AUYEAAFGAr0BRQHz
+        AwAB1gIAAQkB3AHVA60BzwIJAgAB7AEUAfIB/wj0AfEB6gFtBgAB9AGXAeQBeAFyAfQHAAL0Ab0B/wUA
+        AZQBvQHzCAABCQPcAdYCCQMAAewBEwHyCv8CbQYAAfQBTwGXAnIB9AgAARoB8wYAAfQBGgoAARkCCQLd
+        BAAB7AFtAe0J7wH3AesB7wYAAfQEcgH0JQABQgFNAT4HAAE+AwABKAMAAUADAAEwAwABAQEAAQEFAAGA
+        AQEWAAP/AQAB/wHnAcABAQQAAeABIwHAAQEEAAHAAQEBgAEBBAABgAEBAYABAQQAAYABAQEAAQEEAAGA
+        AQEBAAEBBAAB8AEBAQABAQQAAfgBAQEAAQEEAAH4AQEBAAEBBAAB+AEBAYABAQQAAfgBAQHAAQEEAAH4
+        AQEBwAEBBAAB+AEBAcABAQQAAfgBAQHAAQMEAAH4AQEBwAEHBAAB/wEBAcABDwQACv8B/gF/BP8CAAH8
+        AT8D/wF/AgAB/AEfAfwBfwH+AT8CAAH4AR8B+AE/AfwBHwGAAQEB8AEPAfgBPwH4AQ8BwAEDAeABBwH4
+        AT8B8AEHAcABBwHgAQMB+AE/AeABAwHgAQcBwAEDAcABBwH8AR8B8AEPAYABAQHgAQ8B/AEfAfgBHwIA
+        AfABHwH8AR8B+AE/AgAB+AE/AfwBHwH8AT8CAAH8AX8B/gE/Af4BfwL/Af4T/wGAAQMB+AEfAucC/wEA
+        AQEB+AEfAsMC/wEAAQkB+AEfAoEB/wEfAQABAQH4AR8CAAH/AQ8BAAEBAfgBHwGAAQEB/wEPAQABAQIA
+        AeABBwH/AccBAAEBAgAB8AEPAf8BxwEAAQECAAHwAQ8BwAHDAQABAQIAAeABBwHAAeMBAAEBAgABwAED
+        AcAB4wEAAQECAAGAAQMBwAFjAQABAQH4AR8BAQGAAcABAwEAAQEB+AEfAYMBwQHYAQMBAAEBAfgBHwHD
+        AeMB/AEHAQABAQH4AR8C5wH+AQ8BAAEBAfgBHwT/Cw==
+</value>
+  </data>
+  <data name="cmdIniFile.ToolTip" xml:space="preserve">
+    <value>Clique para escolher um arquivo *.ini de opções
+de exportação para AutoCAD DWG/DXF.
+
+OBS: Este arquivo .ini pode ser criado diretamente
+no Inventor, bastando ir nas settings de exportação
+de um desenho qualquer e clicando no botão "Save
+Settings".</value>
+  </data>
+  <data name="chkImpressaoAgruparFormatos.ToolTip" xml:space="preserve">
+    <value>Esta opção agrupa os formatos que são iguais.
+Por exemplo, se um grupo de desenhos tiver 15
+desenhos A4 misturados com 5 desenhos A3,
+os desenhos A3 serão impressos primeiramente,
+agrupados, e somente após serão impressos os 
+desenhos em A4.</value>
+  </data>
+  <metadata name="DialogoPasta.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>226, 17</value>
+  </metadata>
+  <metadata name="DialogoIni.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>349, 17</value>
+  </metadata>
+</root>

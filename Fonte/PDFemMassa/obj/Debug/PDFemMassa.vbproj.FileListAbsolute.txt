@@ -1,0 +1,55 @@
+H:\Fonte PDF\PDFemMassa\bin\PDFemMassa.dll.config
+H:\Fonte PDF\PDFemMassa\bin\PDFemMassa.dll
+H:\Fonte PDF\PDFemMassa\bin\PDFemMassa.pdb
+H:\Fonte PDF\PDFemMassa\bin\.xml
+H:\Fonte PDF\PDFemMassa\obj\Debug\ResolveAssemblyReference.cache
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.frmPesquisarArquivos.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.frmListaArquivos.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.frmInicio.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.frmOpcoesGeral.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.frmPesquisa.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.Resources.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.vbproj.GenerateResource.Cache
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.dll
+H:\Fonte PDF\PDFemMassa\obj\Debug\.xml
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.pdb
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\bin\PDFemMassa.dll.config
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\bin\PDFemMassa.dll
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\bin\PDFemMassa.pdb
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\bin\.xml
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Debug\ResolveAssemblyReference.cache
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmPesquisarArquivos.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmListaArquivos.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmInicio.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmOpcoesGeral.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmPesquisa.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Debug\PDFemMassa.Resources.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Debug\PDFemMassa.vbproj.GenerateResource.Cache
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Debug\PDFemMassa.dll
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Debug\.xml
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Debug\PDFemMassa.pdb
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\bin\PDFemMassa.dll.config
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\bin\PDFemMassa.dll
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\bin\PDFemMassa.pdb
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\bin\.xml
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\bin\stdole.dll
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.vbprojResolveAssemblyReference.cache
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmPesquisarArquivos.resources
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmListaArquivos.resources
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmInicio.resources
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmOpcoesGeral.resources
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmPesquisa.resources
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.Resources.resources
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.vbproj.GenerateResource.Cache
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.dll
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\.xml
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.pdb
+C:\Program Files\Autodesk\Inventor 2014\Bin\PDFemMassa.dll.config
+C:\Program Files\Autodesk\Inventor 2014\Bin\PDFemMassa.dll
+C:\Program Files\Autodesk\Inventor 2014\Bin\PDFemMassa.pdb
+C:\Program Files\Autodesk\Inventor 2014\Bin\.xml
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmAssemblyTools.resources
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\Interop.Office.dll
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.vbproj.ResolveComReference.cache
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\bin\WinControls.ListView.dll
+I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\bin\WinControls.ListView.xml

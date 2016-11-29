@@ -1,0 +1,15 @@
+H:\Fonte PDF\PDFemMassa\bin\PDFemMassa.dll.config
+H:\Fonte PDF\PDFemMassa\bin\PDFemMassa.dll
+H:\Fonte PDF\PDFemMassa\bin\PDFemMassa.pdb
+H:\Fonte PDF\PDFemMassa\bin\.xml
+H:\Fonte PDF\PDFemMassa\obj\Debug\ResolveAssemblyReference.cache
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.frmPesquisarArquivos.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.frmListaArquivos.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.frmInicio.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.frmOpcoesGeral.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.frmPesquisa.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.Resources.resources
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.vbproj.GenerateResource.Cache
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.dll
+H:\Fonte PDF\PDFemMassa\obj\Debug\.xml
+H:\Fonte PDF\PDFemMassa\obj\Debug\PDFemMassa.pdb

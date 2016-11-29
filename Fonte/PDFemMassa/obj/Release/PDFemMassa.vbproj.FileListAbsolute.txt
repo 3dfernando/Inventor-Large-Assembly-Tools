@@ -1,0 +1,19 @@
+C:\Program Files\Autodesk\Inventor 2014\Bin\PDFemMassa.dll.config
+C:\Program Files\Autodesk\Inventor 2014\Bin\PDFemMassa.dll
+C:\Program Files\Autodesk\Inventor 2014\Bin\.xml
+H:\Fonte PDF\PDFemMassa\obj\Release\ResolveAssemblyReference.cache
+H:\Fonte PDF\PDFemMassa\obj\Release\PDFemMassa.frmPesquisarArquivos.resources
+H:\Fonte PDF\PDFemMassa\obj\Release\PDFemMassa.frmListaArquivos.resources
+H:\Fonte PDF\PDFemMassa\obj\Release\PDFemMassa.frmInicio.resources
+H:\Fonte PDF\PDFemMassa\obj\Release\PDFemMassa.frmOpcoesGeral.resources
+H:\Fonte PDF\PDFemMassa\obj\Release\PDFemMassa.frmPesquisa.resources
+H:\Fonte PDF\PDFemMassa\obj\Release\PDFemMassa.Resources.resources
+H:\Fonte PDF\PDFemMassa\obj\Release\PDFemMassa.vbproj.GenerateResource.Cache
+H:\Fonte PDF\PDFemMassa\obj\Release\PDFemMassa.dll
+H:\Fonte PDF\PDFemMassa\obj\Release\.xml
+c:\Bin\PDFemMassa.dll.config
+c:\Bin\PDFemMassa.dll
+c:\Bin\.xml
+H:\Fonte PDF\PDFemMassa\bin\PDFemMassa.dll.config
+H:\Fonte PDF\PDFemMassa\bin\PDFemMassa.dll
+H:\Fonte PDF\PDFemMassa\bin\.xml

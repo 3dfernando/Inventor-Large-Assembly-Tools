@@ -1,0 +1,57 @@
+E:\Backup 07-11-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\PDFemMassa.dll
+E:\Backup 07-11-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\.xml
+E:\Backup 07-11-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\PDFemMassa.tlb
+E:\Backup 07-11-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\ResolveAssemblyReference.cache
+E:\Backup 07-11-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.dll
+E:\Backup 07-11-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\.xml
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\PDFemMassa.dll.config
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\PDFemMassa.dll
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\.xml
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\ResolveAssemblyReference.cache
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmListaArquivos.resources
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmInicio.resources
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmOpcoesGeral.resources
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmPesquisa.resources
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.Resources.resources
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.vbproj.GenerateResource.Cache
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.dll
+E:\Backup 09-01-10\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\.xml
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\PDFemMassa.dll.config
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\PDFemMassa.dll
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\.xml
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\PDFemMassa.tlb
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\ResolveAssemblyReference.cache
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmListaArquivos.resources
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmInicio.resources
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmOpcoesGeral.resources
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmPesquisa.resources
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.Resources.resources
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.vbproj.GenerateResource.Cache
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.dll
+E:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\.xml
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\PDFemMassa.dll.config
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\PDFemMassa.dll
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\bin\.xml
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\ResolveAssemblyReference.cache
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmListaArquivos.resources
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmInicio.resources
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmOpcoesGeral.resources
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.frmPesquisa.resources
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.Resources.resources
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.vbproj.GenerateResource.Cache
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\PDFemMassa.dll
+F:\Backup 21-02-11\Arquivos\Programação\Engenharia\Inventor API\VB.Net\PDFemMassa\PDFemMassa\obj\Release\.xml
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\bin\PDFemMassa.dll.config
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\bin\PDFemMassa.dll
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\bin\.xml
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\bin\PDFemMassa.tlb
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Release\ResolveAssemblyReference.cache
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Release\PDFemMassa.frmPesquisarArquivos.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Release\PDFemMassa.frmListaArquivos.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Release\PDFemMassa.frmInicio.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Release\PDFemMassa.frmOpcoesGeral.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Release\PDFemMassa.frmPesquisa.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Release\PDFemMassa.Resources.resources
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Release\PDFemMassa.vbproj.GenerateResource.Cache
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Release\PDFemMassa.dll
+I:\07 - SOFTWARES\Softwares Inventor\PDF\Fonte\PDFemMassa\obj\Release\.xml
