@@ -61,6 +61,7 @@ Partial Class frmAssemblyTools
         Me.tlvMain.AllowDrop = True
         Me.tlvMain.ContextMenuStrip = Me.mnuTreeList
         Me.tlvMain.EditBackColor = System.Drawing.Color.LightCoral
+        Me.tlvMain.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.tlvMain.ImageList = Me.ImageList1
         Me.tlvMain.Location = New System.Drawing.Point(172, 12)
         Me.tlvMain.MultiSelect = True
@@ -103,10 +104,10 @@ Partial Class frmAssemblyTools
         Me.cmdApply.Name = "cmdApply"
         Me.cmdApply.Size = New System.Drawing.Size(156, 37)
         Me.cmdApply.TabIndex = 6
-        Me.cmdApply.Text = "Aplicar &Modificações"
+        Me.cmdApply.Text = "Perform &Renaming"
         Me.cmdApply.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolTipper.SetToolTip(Me.cmdApply, "Aplica as modificações editadas na árvore ao lado para o sistema de arquivos. Ope" &
-        "ração irreversível!")
+        Me.ToolTipper.SetToolTip(Me.cmdApply, "Applies the changes made in the table shown here" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "to the filesystem. CAUTION - Yo" &
+        "u cannot undo" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " this operation!")
         Me.cmdApply.UseVisualStyleBackColor = True
         '
         'grpOptions
@@ -121,16 +122,17 @@ Partial Class frmAssemblyTools
         Me.grpOptions.Size = New System.Drawing.Size(156, 189)
         Me.grpOptions.TabIndex = 8
         Me.grpOptions.TabStop = False
-        Me.grpOptions.Text = "Opções Adicionais"
+        Me.grpOptions.Text = "Other Options"
         '
         'chkDesenhosVazios
         '
         Me.chkDesenhosVazios.AutoSize = True
         Me.chkDesenhosVazios.Location = New System.Drawing.Point(10, 24)
         Me.chkDesenhosVazios.Name = "chkDesenhosVazios"
-        Me.chkDesenhosVazios.Size = New System.Drawing.Size(129, 17)
+        Me.chkDesenhosVazios.Size = New System.Drawing.Size(128, 17)
         Me.chkDesenhosVazios.TabIndex = 22
-        Me.chkDesenhosVazios.Text = "Criar desenhos vazios"
+        Me.chkDesenhosVazios.Text = "Create empty idw files"
+        Me.ToolTipper.SetToolTip(Me.chkDesenhosVazios, resources.GetString("chkDesenhosVazios.ToolTip"))
         Me.chkDesenhosVazios.UseVisualStyleBackColor = True
         '
         'Label3
@@ -138,9 +140,9 @@ Partial Class frmAssemblyTools
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(7, 48)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(138, 13)
+        Me.Label3.Size = New System.Drawing.Size(119, 13)
         Me.Label3.TabIndex = 21
-        Me.Label3.Text = "Caminho do Template IDW:"
+        Me.Label3.Text = "IDW Template Filepath:"
         '
         'cmdTemplate
         '
@@ -148,7 +150,8 @@ Partial Class frmAssemblyTools
         Me.cmdTemplate.Name = "cmdTemplate"
         Me.cmdTemplate.Size = New System.Drawing.Size(63, 26)
         Me.cmdTemplate.TabIndex = 20
-        Me.cmdTemplate.Text = "Editar..."
+        Me.cmdTemplate.Text = "Edit..."
+        Me.ToolTipper.SetToolTip(Me.cmdTemplate, "Changes the ""empty IDW"" template path.")
         Me.cmdTemplate.UseVisualStyleBackColor = True
         '
         'txtTemplate
@@ -165,9 +168,11 @@ Partial Class frmAssemblyTools
         Me.chkLibraryAccess.AutoSize = True
         Me.chkLibraryAccess.Location = New System.Drawing.Point(10, 158)
         Me.chkLibraryAccess.Name = "chkLibraryAccess"
-        Me.chkLibraryAccess.Size = New System.Drawing.Size(117, 17)
+        Me.chkLibraryAccess.Size = New System.Drawing.Size(132, 17)
         Me.chkLibraryAccess.TabIndex = 18
-        Me.chkLibraryAccess.Text = "Modificar &biblioteca"
+        Me.chkLibraryAccess.Text = "Change Files in Library"
+        Me.ToolTipper.SetToolTip(Me.chkLibraryAccess, "When checked, allow the program to change " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the filenames of files inside the cur" &
+        "rent Project's" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Library paths.")
         Me.chkLibraryAccess.UseVisualStyleBackColor = True
         '
         'cmdCsv
@@ -178,9 +183,9 @@ Partial Class frmAssemblyTools
         Me.cmdCsv.Name = "cmdCsv"
         Me.cmdCsv.Size = New System.Drawing.Size(156, 45)
         Me.cmdCsv.TabIndex = 9
-        Me.cmdCsv.Text = "Carregar &Planilha" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "de Correspondências"
+        Me.cmdCsv.Text = "&Load Renaming" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Spreadsheet"
         Me.cmdCsv.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolTipper.SetToolTip(Me.cmdCsv, "Carrega na árvore ao lado os dados da montagem aberta no documento atual.")
+        Me.ToolTipper.SetToolTip(Me.cmdCsv, resources.GetString("cmdCsv.ToolTip"))
         Me.cmdCsv.UseVisualStyleBackColor = True
         '
         'cmdEditPathPanG
@@ -189,8 +194,8 @@ Partial Class frmAssemblyTools
         Me.cmdEditPathPanG.Name = "cmdEditPathPanG"
         Me.cmdEditPathPanG.Size = New System.Drawing.Size(63, 26)
         Me.cmdEditPathPanG.TabIndex = 17
-        Me.cmdEditPathPanG.Text = "Editar..."
-        Me.ToolTipper.SetToolTip(Me.cmdEditPathPanG, "Este botão abre uma caixa para selecionar a pasta de backup do Pack and Go")
+        Me.cmdEditPathPanG.Text = "Edit..."
+        Me.ToolTipper.SetToolTip(Me.cmdEditPathPanG, resources.GetString("cmdEditPathPanG.ToolTip"))
         Me.cmdEditPathPanG.UseVisualStyleBackColor = True
         '
         'cmdPurge
@@ -199,8 +204,9 @@ Partial Class frmAssemblyTools
         Me.cmdPurge.Name = "cmdPurge"
         Me.cmdPurge.Size = New System.Drawing.Size(63, 26)
         Me.cmdPurge.TabIndex = 18
-        Me.cmdPurge.Text = "P&urgar"
-        Me.ToolTipper.SetToolTip(Me.cmdPurge, "Este botão remove todos os arquivos e pastas da pasta acima. Use com cuidado!")
+        Me.cmdPurge.Text = "P&urge"
+        Me.ToolTipper.SetToolTip(Me.cmdPurge, "This button will clean the folder selected above" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(All files and folders will be " &
+        "deleted)")
         Me.cmdPurge.UseVisualStyleBackColor = True
         '
         'cmdPEG
@@ -211,9 +217,10 @@ Partial Class frmAssemblyTools
         Me.cmdPEG.Name = "cmdPEG"
         Me.cmdPEG.Size = New System.Drawing.Size(156, 37)
         Me.cmdPEG.TabIndex = 19
-        Me.cmdPEG.Text = "Fazer Pack && Go apenas"
+        Me.cmdPEG.Text = "Perform a Rapid " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Pack&Go Operation"
         Me.cmdPEG.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolTipper.SetToolTip(Me.cmdPEG, "Este comando só faz o Pack and Go da montagem.")
+        Me.ToolTipper.SetToolTip(Me.cmdPEG, "This command performs a rapid Pack & Go operation, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "where it will only search in" &
+        "side the project paths" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " (it's faster than the original Inventor Pack&Go)")
         Me.cmdPEG.UseVisualStyleBackColor = True
         '
         'txtProject
@@ -230,9 +237,9 @@ Partial Class frmAssemblyTools
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(11, 68)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(129, 13)
+        Me.Label1.Size = New System.Drawing.Size(120, 13)
         Me.Label1.TabIndex = 11
-        Me.Label1.Text = "Caminho do Project Atual:"
+        Me.Label1.Text = "Current Project Filepath:"
         '
         'grpPanG
         '
@@ -252,9 +259,9 @@ Partial Class frmAssemblyTools
         Me.lblBkp.AutoSize = True
         Me.lblBkp.Location = New System.Drawing.Point(5, 20)
         Me.lblBkp.Name = "lblBkp"
-        Me.lblBkp.Size = New System.Drawing.Size(58, 13)
+        Me.lblBkp.Size = New System.Drawing.Size(79, 13)
         Me.lblBkp.TabIndex = 16
-        Me.lblBkp.Text = "Pasta bkp:"
+        Me.lblBkp.Text = "Backup Folder:"
         '
         'txtBkpPath
         '
@@ -264,9 +271,6 @@ Partial Class frmAssemblyTools
         Me.txtBkpPath.Name = "txtBkpPath"
         Me.txtBkpPath.Size = New System.Drawing.Size(140, 34)
         Me.txtBkpPath.TabIndex = 15
-        '
-        'fldDiag
-        '
         '
         'FOpen
         '
@@ -295,7 +299,7 @@ Partial Class frmAssemblyTools
         Me.Controls.Add(Me.tlvMain)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAssemblyTools"
-        Me.Text = "Ferramentas de Montagem"
+        Me.Text = "Batch Renamer"
         Me.mnuTreeList.ResumeLayout(False)
         Me.grpOptions.ResumeLayout(False)
         Me.grpOptions.PerformLayout()

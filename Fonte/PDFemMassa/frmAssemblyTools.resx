@@ -128,7 +128,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABk
-        CwAAAk1TRnQBSQFMAgEBBAEAAeABAAHgAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CwAAAk1TRnQBSQFMAgEBBAEAAfABAAHwAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -182,9 +182,33 @@
   <metadata name="ToolTipper.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>290, 17</value>
   </metadata>
-  <metadata name="ToolTipper.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>290, 17</value>
-  </metadata>
+  <data name="chkDesenhosVazios.ToolTip" xml:space="preserve">
+    <value>When checked the program will create empty IDW files
+(according to the template selected below) with the same
+filename as the selected files. 
+Some designers will find this useful for batch drawing
+making to release the design.</value>
+  </data>
+  <data name="cmdCsv.ToolTip" xml:space="preserve">
+    <value>This will load a spreadsheet in the format shown below 
+with a list of correspondences (From-to filenames) for batch
+renaming.
+
+Format accepted - *.CSV - SEMICOLON SEPARATED (don't use commas)
+OLDFILENAME1;NEWFILENAME1
+OLDFILENAME2;NEWFILENAME2
+OLDFILENAME3;NEWFILENAME3
+
+---NO HEADERS NEEDED---</value>
+  </data>
+  <data name="cmdEditPathPanG.ToolTip" xml:space="preserve">
+    <value>This allows one to change the pack-and-go (safety measure)
+backup folder.
+The pack-and-go will copy all the files and folders referenced
+in this assembly to a subfolder inside the folders shown above.
+This is an insurance in case anything fails and the batch renaming
+is interrupted.</value>
+  </data>
   <metadata name="fldDiag.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>400, 17</value>
   </metadata>

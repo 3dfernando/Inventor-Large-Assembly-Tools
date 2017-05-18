@@ -95,9 +95,7 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("<?xml version=""1.0"" encoding=""utf-16""?>"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"<ArrayOfString xmlns:xsi=""http://www.w3."& _ 
             "org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"  <s"& _ 
-            "tring>C:\Users\cooling\Desktop\obras\9000529 - VRTM+IF - JBS - Passo Fundo - RS\"& _ 
-            "Refrigeração\122 - Resfriador Beaudelot\02 - BE2-14X36X3000</string>"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"</ArrayOfS"& _ 
-            "tring>")>  _
+            "tring>C:</string>"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"</ArrayOfString>")>  _
         Public Property LocaisPadraoPesquisa() As Global.System.Collections.Specialized.StringCollection
             Get
                 Return CType(Me("LocaisPadraoPesquisa"),Global.System.Collections.Specialized.StringCollection)
@@ -481,7 +479,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("I:\")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\")>  _
         Public Property IDWTemplatePath() As String
             Get
                 Return CType(Me("IDWTemplatePath"),String)

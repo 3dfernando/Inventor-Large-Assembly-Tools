@@ -22,17 +22,17 @@ Partial Class frmPesquisa
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPesquisa))
-        Me.lstArquivosEncontrados = New System.Windows.Forms.ListView
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.cmdAdicionar = New System.Windows.Forms.Button
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.lblTempo = New System.Windows.Forms.Label
-        Me.cmdCancel = New System.Windows.Forms.Button
+        Me.lstArquivosEncontrados = New System.Windows.Forms.ListView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.SelecionarTudoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.SelecionarTudoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmdAdicionar = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.lblTempo = New System.Windows.Forms.Label()
+        Me.cmdCancel = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -50,6 +50,18 @@ Partial Class frmPesquisa
         Me.lstArquivosEncontrados.UseCompatibleStateImageBehavior = False
         Me.lstArquivosEncontrados.View = System.Windows.Forms.View.Details
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelecionarTudoToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(160, 26)
+        '
+        'SelecionarTudoToolStripMenuItem
+        '
+        Me.SelecionarTudoToolStripMenuItem.Name = "SelecionarTudoToolStripMenuItem"
+        Me.SelecionarTudoToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.SelecionarTudoToolStripMenuItem.Text = "Selecionar Tudo"
+        '
         'ImageList1
         '
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
@@ -63,9 +75,9 @@ Partial Class frmPesquisa
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(9, 11)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(124, 13)
+        Me.Label1.Size = New System.Drawing.Size(82, 13)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Resultados da Pesquisa:"
+        Me.Label1.Text = "Search Results:"
         '
         'cmdAdicionar
         '
@@ -73,11 +85,11 @@ Partial Class frmPesquisa
         Me.cmdAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmdAdicionar.ImageKey = "2rightarrow.png"
         Me.cmdAdicionar.ImageList = Me.ImageList1
-        Me.cmdAdicionar.Location = New System.Drawing.Point(211, 190)
+        Me.cmdAdicionar.Location = New System.Drawing.Point(246, 190)
         Me.cmdAdicionar.Name = "cmdAdicionar"
-        Me.cmdAdicionar.Size = New System.Drawing.Size(129, 33)
+        Me.cmdAdicionar.Size = New System.Drawing.Size(94, 33)
         Me.cmdAdicionar.TabIndex = 2
-        Me.cmdAdicionar.Text = "&Adicionar Arquivos"
+        Me.cmdAdicionar.Text = "&Add Files"
         Me.cmdAdicionar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.cmdAdicionar.UseVisualStyleBackColor = True
         '
@@ -87,31 +99,19 @@ Partial Class frmPesquisa
         Me.lblTempo.AutoSize = True
         Me.lblTempo.Location = New System.Drawing.Point(203, 11)
         Me.lblTempo.Name = "lblTempo"
-        Me.lblTempo.Size = New System.Drawing.Size(134, 13)
+        Me.lblTempo.Size = New System.Drawing.Size(100, 13)
         Me.lblTempo.TabIndex = 3
-        Me.lblTempo.Text = "Tempo de Pesquisa: 00:00"
+        Me.lblTempo.Text = "Search Time: 00:00"
         Me.lblTempo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'cmdCancel
         '
-        Me.cmdCancel.Location = New System.Drawing.Point(131, 191)
+        Me.cmdCancel.Location = New System.Drawing.Point(166, 191)
         Me.cmdCancel.Name = "cmdCancel"
         Me.cmdCancel.Size = New System.Drawing.Size(74, 32)
         Me.cmdCancel.TabIndex = 4
-        Me.cmdCancel.Text = "C&ancelar"
+        Me.cmdCancel.Text = "C&ancel"
         Me.cmdCancel.UseVisualStyleBackColor = True
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelecionarTudoToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(160, 26)
-        '
-        'SelecionarTudoToolStripMenuItem
-        '
-        Me.SelecionarTudoToolStripMenuItem.Name = "SelecionarTudoToolStripMenuItem"
-        Me.SelecionarTudoToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
-        Me.SelecionarTudoToolStripMenuItem.Text = "Selecionar Tudo"
         '
         'frmPesquisa
         '
@@ -128,7 +128,7 @@ Partial Class frmPesquisa
         Me.MinimizeBox = False
         Me.Name = "frmPesquisa"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Pesquisa"
+        Me.Text = "Search"
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()

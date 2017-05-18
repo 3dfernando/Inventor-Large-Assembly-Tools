@@ -17,7 +17,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <StartAction>Program</StartAction>
-    <StartProgram>C:\Program Files\Autodesk\Inventor 2014\Bin\Inventor.exe</StartProgram>
+    <StartProgram>C:\Program Files\Autodesk\Inventor 2016\Bin\Inventor.exe</StartProgram>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">

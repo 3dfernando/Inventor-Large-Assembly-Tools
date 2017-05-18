@@ -64,26 +64,26 @@ Namespace PDFemMassa
                 New System.Drawing.Icon(My.Resources.IconePDF, TamanhoGrande, TamanhoGrande))
 
             'Implementa o botão PDF
-            BotaoPDF = ControlDefs.AddButtonDefinition("Exportação", "adFernandoExport", _
-                        CommandTypesEnum.kNonShapeEditCmdType, ClientId, _
-                        "Exporta PDFs e Imprime vários arquivos", "Assistente de Exportação", _
+            BotaoPDF = ControlDefs.AddButtonDefinition("Batch Export", "adFernandoExport",
+                        CommandTypesEnum.kNonShapeEditCmdType, ClientId,
+                        "Exports PDFs and batch prints files", "Exports PDFs and batch prints files",
                         IconePequeno, IconeGrande, ButtonDisplayEnum.kDisplayTextInLearningMode)
 
             'Implementa um ícone para o botão SheetMetal
 
-            Dim IconePequeno2 As stdole.IPictureDisp = _
-                Microsoft.VisualBasic.Compatibility.VB6.IconToIPicture( _
-                New System.Drawing.Icon(My.Resources.IconeSheetMetal, 16, 16))
+            'Dim IconePequeno2 As stdole.IPictureDisp = _
+            '    Microsoft.VisualBasic.Compatibility.VB6.IconToIPicture( _
+            '    New System.Drawing.Icon(My.Resources.IconeSheetMetal, 16, 16))
 
-            Dim IconeGrande2 As stdole.IPictureDisp = _
-                Microsoft.VisualBasic.Compatibility.VB6.IconToIPicture( _
-                New System.Drawing.Icon(My.Resources.IconeSheetMetal, TamanhoGrande, TamanhoGrande))
+            'Dim IconeGrande2 As stdole.IPictureDisp = _
+            '    Microsoft.VisualBasic.Compatibility.VB6.IconToIPicture( _
+            '    New System.Drawing.Icon(My.Resources.IconeSheetMetal, TamanhoGrande, TamanhoGrande))
 
-            'Implementa o botão SheetMetal
-            BotaoSheetMetal = ControlDefs.AddButtonDefinition("Atualizar Chapas", "adFernandoSheetMetal",
-                        CommandTypesEnum.kNonShapeEditCmdType, ClientId,
-                        "Atualiza as chapas nas montagens", "Atualiza as chapas nas montagens",
-                        IconePequeno2, IconeGrande2, ButtonDisplayEnum.kDisplayTextInLearningMode)
+            ''Implementa o botão SheetMetal
+            'BotaoSheetMetal = ControlDefs.AddButtonDefinition("Atualizar Chapas", "adFernandoSheetMetal",
+            '            CommandTypesEnum.kNonShapeEditCmdType, ClientId,
+            '            "Atualiza as chapas nas montagens", "Atualiza as chapas nas montagens",
+            '            IconePequeno2, IconeGrande2, ButtonDisplayEnum.kDisplayTextInLearningMode)
 
             'Implementa um ícone para o botão Assembly Tools
 
@@ -96,9 +96,9 @@ Namespace PDFemMassa
                 New System.Drawing.Icon(My.Resources.AssemblyTools, TamanhoGrande, TamanhoGrande))
 
             'Implementa o botão AssemblyTools
-            BotaoAssemblyTools = ControlDefs.AddButtonDefinition("Ferramentas" & vbCrLf & "de Montagem", "adFernandoAssyTools",
+            BotaoAssemblyTools = ControlDefs.AddButtonDefinition("Batch Renamer", "adFernandoAssyTools",
                         CommandTypesEnum.kNonShapeEditCmdType, ClientId,
-                        "Ferramentas de Montagem", "Ferramentas de Montagem",
+                        "Renames multiple files and redoes the links in the main assembly", "Renames multiple files and redoes the links in the main assembly",
                         IconePequeno3, IconeGrande3, ButtonDisplayEnum.kDisplayTextInLearningMode)
 
             If firstTime Then
@@ -160,7 +160,7 @@ Namespace PDFemMassa
 
             Try
                 clsid = clssRoot.CreateSubKey("CLSID\" + AddInGuid(t))
-                clsid.SetValue(Nothing, "Ferramentas de Exportação")
+                clsid.SetValue(Nothing, "Batch Operation Tools")
                 subKey = clsid.CreateSubKey("Implemented Categories\{39AD2B5C-7A29-11D6-8E0A-0010B541CAA8}")
                 subKey.Close()
 
@@ -178,7 +178,7 @@ Namespace PDFemMassa
                 subKey.Close()
 
                 subKey = clsid.CreateSubKey("Description")
-                subKey.SetValue(Nothing, "Ferramentas de Exportação")
+                subKey.SetValue(Nothing, "Batch Operation Tools")
 
             Catch ex As Exception
                 System.Diagnostics.Trace.Assert(False)
@@ -245,7 +245,7 @@ Namespace PDFemMassa
             PanelTemp.CommandControls.AddSeparator()
             'Adiciona o botão
             PanelTemp.CommandControls.AddButton(BotaoPDF, True, True)
-            PanelTemp.CommandControls.AddButton(BotaoSheetMetal, True, True)
+            'PanelTemp.CommandControls.AddButton(BotaoSheetMetal, True, True)
             PanelTemp.CommandControls.AddButton(BotaoAssemblyTools, True, True)
 
 
@@ -254,10 +254,10 @@ Namespace PDFemMassa
             'Tab "Tools"
             TabTemp = RibbonTemp.RibbonTabs.Item("id_TabTools")
             'Painel novo, "Exportar"
-            PanelTemp = TabTemp.RibbonPanels.Add("Exportar", "adFernandoExportPartPanel", ClientId)
+            PanelTemp = TabTemp.RibbonPanels.Add("Batch Operations", "adFernandoExportPartPanel", ClientId)
             'Adiciona o botão
             PanelTemp.CommandControls.AddButton(BotaoPDF, True, True)
-            PanelTemp.CommandControls.AddButton(BotaoSheetMetal, True, True)
+            'PanelTemp.CommandControls.AddButton(BotaoSheetMetal, True, True)
             PanelTemp.CommandControls.AddButton(BotaoAssemblyTools, True, True)
 
             'Ribbon "Assembly"
@@ -265,10 +265,10 @@ Namespace PDFemMassa
             'Tab "Tools"
             TabTemp = RibbonTemp.RibbonTabs.Item("id_TabTools")
             'Painel novo, "Exportar"
-            PanelTemp = TabTemp.RibbonPanels.Add("Exportar", "adFernandoExportAssyPanel", ClientId)
+            PanelTemp = TabTemp.RibbonPanels.Add("Batch Operations", "adFernandoExportAssyPanel", ClientId)
             'Adiciona o botão
             PanelTemp.CommandControls.AddButton(BotaoPDF, True, True)
-            PanelTemp.CommandControls.AddButton(BotaoSheetMetal, True, True)
+            'PanelTemp.CommandControls.AddButton(BotaoSheetMetal, True, True)
             PanelTemp.CommandControls.AddButton(BotaoAssemblyTools, True, True)
 
             'Ribbon "Drawing"
@@ -276,16 +276,16 @@ Namespace PDFemMassa
             'Tab "Tools"
             TabTemp = RibbonTemp.RibbonTabs.Item("id_TabTools")
             'Painel novo, "Exportar"
-            PanelTemp = TabTemp.RibbonPanels.Add("Exportar", "adFernandoExportDwgPanel", ClientId)
+            PanelTemp = TabTemp.RibbonPanels.Add("Batch Operations", "adFernandoExportDwgPanel", ClientId)
             'Adiciona o botão
             PanelTemp.CommandControls.AddButton(BotaoPDF, True, True)
-            PanelTemp.CommandControls.AddButton(BotaoSheetMetal, True, True)
+            'PanelTemp.CommandControls.AddButton(BotaoSheetMetal, True, True)
             PanelTemp.CommandControls.AddButton(BotaoAssemblyTools, True, True)
 
             'Insere também no menu principal
             Dim MenuPrincipal As CommandControls = UI.FileBrowserControls
-            MenuPrincipal.AddButton(BotaoPDF, True, True, "Export", True)
-            MenuPrincipal.AddButton(BotaoAssemblyTools, True, True, "Assembly Tools", True)
+            MenuPrincipal.AddButton(BotaoPDF, True, True, "Batch Export", True)
+            MenuPrincipal.AddButton(BotaoAssemblyTools, True, True, "Batch Rename", True)
 
         End Sub
 
@@ -297,10 +297,10 @@ Namespace PDFemMassa
             Dim BarraFerramentas As CommandBar
 
             BarrasFerramentas = UI.CommandBars
-            BarraFerramentas = BarrasFerramentas.Add("Assistente de Exportação", "adFernandoExportToolbar", , ClientId)
+            BarraFerramentas = BarrasFerramentas.Add("Batch Operations", "adFernandoExportToolbar", , ClientId)
 
             BarraFerramentas.Controls.AddButton(BotaoPDF)
-            BarraFerramentas.Controls.AddButton(BotaoSheetMetal)
+            'BarraFerramentas.Controls.AddButton(BotaoSheetMetal)
             BarraFerramentas.Controls.AddButton(BotaoAssemblyTools)
 
         End Sub
@@ -312,15 +312,15 @@ Namespace PDFemMassa
             FormInicio.ShowDialog()
         End Sub
 
-        Public Sub BotaoSheetMetal_OnExecute(ByVal Context As Inventor.NameValueMap) Handles BotaoSheetMetal.OnExecute
-            If AtualizarSheetMetalMontagens Then
-                AtualizarSheetMetalMontagens = False
-                BotaoSheetMetal.Pressed = False
-            Else
-                AtualizarSheetMetalMontagens = True
-                BotaoSheetMetal.Pressed = True
-            End If
-        End Sub
+        'Public Sub BotaoSheetMetal_OnExecute(ByVal Context As Inventor.NameValueMap) Handles BotaoSheetMetal.OnExecute
+        '    If AtualizarSheetMetalMontagens Then
+        '        AtualizarSheetMetalMontagens = False
+        '        BotaoSheetMetal.Pressed = False
+        '    Else
+        '        AtualizarSheetMetalMontagens = True
+        '        BotaoSheetMetal.Pressed = True
+        '    End If
+        'End Sub
 
         Public Shared Sub BotaoAssemblyTools_onexecute(ByVal Context As Inventor.NameValueMap) Handles BotaoAssemblyTools.OnExecute
             Dim FormAssyTools As New frmAssemblyTools
@@ -330,157 +330,158 @@ Namespace PDFemMassa
 #End Region
 
 #Region "ATUALIZAR PROPRIEDADES DO SHEET METAL"
+        'Older program that I was too lazy to create a new add-in for. 
 
-        Private Sub Eventos_OnSaveDocument(ByVal DocumentObject As Inventor._Document, ByVal BeforeOrAfter As Inventor.EventTimingEnum, ByVal Context As Inventor.NameValueMap, ByRef HandlingCode As Inventor.HandlingCodeEnum) Handles Eventos.OnSaveDocument
-            If BeforeOrAfter = EventTimingEnum.kBefore Then
-                'Antes de salvar, atualiza as propriedades do documento!
-                If DocumentObject.DocumentType = DocumentTypeEnum.kAssemblyDocumentObject Then
-                    If AtualizarSheetMetalMontagens Then
-                        For Each Doc As Inventor.Document In DocumentObject.ReferencedDocuments
-                            AtualizaSheetMetal(Doc, True)
-                            AtualizaArea(Doc)
-                        Next
-                        AtualizaArea(DocumentObject)
-                    Else
-                        For Each Doc As Inventor.Document In DocumentObject.ReferencedDocuments
-                            AtualizaArea(Doc)
-                        Next
-                        AtualizaArea(DocumentObject)
-                    End If
-                Else
-                    AtualizaSheetMetal(DocumentObject)
-                    AtualizaArea(DocumentObject)
-                End If
-            End If
-        End Sub
+        'Private Sub Eventos_OnSaveDocument(ByVal DocumentObject As Inventor._Document, ByVal BeforeOrAfter As Inventor.EventTimingEnum, ByVal Context As Inventor.NameValueMap, ByRef HandlingCode As Inventor.HandlingCodeEnum) Handles Eventos.OnSaveDocument
+        '    If BeforeOrAfter = EventTimingEnum.kBefore Then
+        '        'Antes de salvar, atualiza as propriedades do documento!
+        '        If DocumentObject.DocumentType = DocumentTypeEnum.kAssemblyDocumentObject Then
+        '            If AtualizarSheetMetalMontagens Then
+        '                For Each Doc As Inventor.Document In DocumentObject.ReferencedDocuments
+        '                    AtualizaSheetMetal(Doc, True)
+        '                    AtualizaArea(Doc)
+        '                Next
+        '                AtualizaArea(DocumentObject)
+        '            Else
+        '                For Each Doc As Inventor.Document In DocumentObject.ReferencedDocuments
+        '                    AtualizaArea(Doc)
+        '                Next
+        '                AtualizaArea(DocumentObject)
+        '            End If
+        '        Else
+        '            AtualizaSheetMetal(DocumentObject)
+        '            AtualizaArea(DocumentObject)
+        '        End If
+        '    End If
+        'End Sub
 
-        Private Sub AtualizaSheetMetal(ByVal Documento As Inventor.Document, Optional ByVal Assembly As Boolean = False)
-            Dim Part As PartDocument
-            Dim Aberta As Boolean = False
+        'Private Sub AtualizaSheetMetal(ByVal Documento As Inventor.Document, Optional ByVal Assembly As Boolean = False)
+        '    Dim Part As PartDocument
+        '    Dim Aberta As Boolean = False
 
-            m_inventorApplication.SilentOperation = True
+        '    m_inventorApplication.SilentOperation = True
 
-            If Documento.DocumentType = DocumentTypeEnum.kPartDocumentObject Then
-                Part = Documento
-                If Part.DocumentSubType.DocumentSubTypeID = "{9C464203-9BAE-11D3-8BAD-0060B0CE6BB4}" Then
-                    Dim Sheet As SheetMetalComponentDefinition
-                    Sheet = Part.ComponentDefinition
+        '    If Documento.DocumentType = DocumentTypeEnum.kPartDocumentObject Then
+        '        Part = Documento
+        '        If Part.DocumentSubType.DocumentSubTypeID = "{9C464203-9BAE-11D3-8BAD-0060B0CE6BB4}" Then
+        '            Dim Sheet As SheetMetalComponentDefinition
+        '            Sheet = Part.ComponentDefinition
 
-                    Try
-                        'If Not Sheet.HasFlatPattern Then
-                        'Sheet.Unfold()
-                        'Sheet.FlatPattern.ExitEdit()
-                        'Aberta = True
-                        'End If
+        '            Try
+        '                'If Not Sheet.HasFlatPattern Then
+        '                'Sheet.Unfold()
+        '                'Sheet.FlatPattern.ExitEdit()
+        '                'Aberta = True
+        '                'End If
 
-                        Dim Max As Point
-                        Dim Min As Point
+        '                Dim Max As Point
+        '                Dim Min As Point
 
-                        Dim DeltaX As Double
-                        Dim DeltaY As Double
-                        Dim DeltaZ As Double
-                        Dim Espessura As Double
+        '                Dim DeltaX As Double
+        '                Dim DeltaY As Double
+        '                Dim DeltaZ As Double
+        '                Dim Espessura As Double
 
-                        Espessura = Math.Round(Sheet.Thickness.Value, 3) * 10
-                        Max = Sheet.FlatPattern.RangeBox.MaxPoint
-                        Min = Sheet.FlatPattern.RangeBox.MinPoint
+        '                Espessura = Math.Round(Sheet.Thickness.Value, 3) * 10
+        '                Max = Sheet.FlatPattern.RangeBox.MaxPoint
+        '                Min = Sheet.FlatPattern.RangeBox.MinPoint
 
-                        DeltaX = Math.Round(Math.Abs(Max.X - Min.X), 3) * 10
-                        DeltaY = Math.Round(Math.Abs(Max.Y - Min.Y), 3) * 10
-                        DeltaZ = Math.Round(Math.Abs(Max.Z - Min.Z), 3) * 10
+        '                DeltaX = Math.Round(Math.Abs(Max.X - Min.X), 3) * 10
+        '                DeltaY = Math.Round(Math.Abs(Max.Y - Min.Y), 3) * 10
+        '                DeltaZ = Math.Round(Math.Abs(Max.Z - Min.Z), 3) * 10
 
-                        'Aplica as propriedades
+        '                'Aplica as propriedades
 
-                        If DeltaX = Espessura Then
-                            If DeltaY < DeltaZ Then
-                                AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaY, 0))))
-                                AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaZ, 0))))
-                            Else
-                                AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaZ, 0))))
-                                AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaY, 0))))
-                            End If
-                        ElseIf DeltaY = Espessura Then
-                            If DeltaX < DeltaZ Then
-                                AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaX, 0))))
-                                AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaZ, 0))))
-                            Else
-                                AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaZ, 0))))
-                                AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaX, 0))))
-                            End If
-                        ElseIf DeltaZ = Espessura Then
-                            If DeltaX < DeltaY Then
-                                AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaX, 0))))
-                                AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaY, 0))))
-                            Else
-                                AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaY, 0))))
-                                AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaX, 0))))
-                            End If
-                        Else
-                            'Se não é nenhum dos três, pega os dois maiores
-                            If DeltaX > DeltaY Then
-                                If DeltaY > DeltaZ Then
-                                    AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaX, 0))))
-                                    AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaY, 0))))
-                                Else
-                                    AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaX, 0))))
-                                    AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaZ, 0))))
-                                End If
-                            Else
-                                If DeltaY > DeltaZ Then
-                                    AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaY, 0))))
-                                    AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaZ, 0))))
-                                Else
-                                    AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaX, 0))))
-                                    AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaZ, 0))))
-                                End If
-                            End If
-                        End If
+        '                If DeltaX = Espessura Then
+        '                    If DeltaY < DeltaZ Then
+        '                        AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaY, 0))))
+        '                        AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaZ, 0))))
+        '                    Else
+        '                        AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaZ, 0))))
+        '                        AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaY, 0))))
+        '                    End If
+        '                ElseIf DeltaY = Espessura Then
+        '                    If DeltaX < DeltaZ Then
+        '                        AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaX, 0))))
+        '                        AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaZ, 0))))
+        '                    Else
+        '                        AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaZ, 0))))
+        '                        AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaX, 0))))
+        '                    End If
+        '                ElseIf DeltaZ = Espessura Then
+        '                    If DeltaX < DeltaY Then
+        '                        AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaX, 0))))
+        '                        AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaY, 0))))
+        '                    Else
+        '                        AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaY, 0))))
+        '                        AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaX, 0))))
+        '                    End If
+        '                Else
+        '                    'Se não é nenhum dos três, pega os dois maiores
+        '                    If DeltaX > DeltaY Then
+        '                        If DeltaY > DeltaZ Then
+        '                            AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaX, 0))))
+        '                            AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaY, 0))))
+        '                        Else
+        '                            AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaX, 0))))
+        '                            AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaZ, 0))))
+        '                        End If
+        '                    Else
+        '                        If DeltaY > DeltaZ Then
+        '                            AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaY, 0))))
+        '                            AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaZ, 0))))
+        '                        Else
+        '                            AtualizaPropriedade(Documento, "SheetMetalLength", Trim(Str(Math.Round(DeltaX, 0))))
+        '                            AtualizaPropriedade(Documento, "SheetMetalWidth", Trim(Str(Math.Round(DeltaZ, 0))))
+        '                        End If
+        '                    End If
+        '                End If
 
-                        If Aberta And Assembly Then
-                            Part.Save()
-                            Part.Close()
-                        End If
-                    Catch ex As Exception
+        '                If Aberta And Assembly Then
+        '                    Part.Save()
+        '                    Part.Close()
+        '                End If
+        '            Catch ex As Exception
 
-                    End Try
-                End If
-            ElseIf Documento.DocumentType = DocumentTypeEnum.kAssemblyDocumentObject And _
-            AtualizarSheetMetalMontagens Then
-                For Each Doc As Inventor.Document In Documento.ReferencedDocuments
-                    AtualizaSheetMetal(Doc, True)
-                Next
-            End If
+        '            End Try
+        '        End If
+        '    ElseIf Documento.DocumentType = DocumentTypeEnum.kAssemblyDocumentObject And _
+        '    AtualizarSheetMetalMontagens Then
+        '        For Each Doc As Inventor.Document In Documento.ReferencedDocuments
+        '            AtualizaSheetMetal(Doc, True)
+        '        Next
+        '    End If
 
-            m_inventorApplication.SilentOperation = False
-        End Sub
+        '    m_inventorApplication.SilentOperation = False
+        'End Sub
 
-        Public Sub AtualizaPropriedade(ByVal Documento As Document, ByVal Propriedade As String, _
-                                       ByVal Valor As String)
-            Dim CustomProps As PropertySet
+        'Public Sub AtualizaPropriedade(ByVal Documento As Document, ByVal Propriedade As String, _
+        '                               ByVal Valor As String)
+        '    Dim CustomProps As PropertySet
 
-            CustomProps = Documento.PropertySets.Item("Inventor User Defined Properties")
+        '    CustomProps = Documento.PropertySets.Item("Inventor User Defined Properties")
 
-            Try
-                CustomProps.Item(Propriedade).Value = Valor
-            Catch ex As Exception
-                Try
-                    CustomProps.Add(Valor, Propriedade)
-                Catch ex2 As Exception
+        '    Try
+        '        CustomProps.Item(Propriedade).Value = Valor
+        '    Catch ex As Exception
+        '        Try
+        '            CustomProps.Add(Valor, Propriedade)
+        '        Catch ex2 As Exception
 
-                End Try
-            End Try
-        End Sub
+        '        End Try
+        '    End Try
+        'End Sub
 
-        Private Sub AtualizaArea(ByVal Documento As Inventor.Document)
-            Try
-                Dim Area As Double
-                Area = Documento.ComponentDefinition.MassProperties.Area / 10000 'Gives the area in m²
-                AtualizaPropriedade(Documento, "SurfaceArea_m2", Trim(Str(Math.Round(Area, 2))))
-            Catch ex As Exception
+        'Private Sub AtualizaArea(ByVal Documento As Inventor.Document)
+        '    Try
+        '        Dim Area As Double
+        '        Area = Documento.ComponentDefinition.MassProperties.Area / 10000 'Gives the area in m²
+        '        AtualizaPropriedade(Documento, "SurfaceArea_m2", Trim(Str(Math.Round(Area, 2))))
+        '    Catch ex As Exception
 
-            End Try
+        '    End Try
 
-        End Sub
+        'End Sub
 
 
 #End Region

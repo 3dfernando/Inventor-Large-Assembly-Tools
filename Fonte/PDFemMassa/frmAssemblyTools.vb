@@ -53,11 +53,11 @@ Public Class frmAssemblyTools
             frmAssemblyToolsOriginalSize = Me.Size
 
             tlvMain.Columns.Clear()
-            tlvMain.Columns.Add("Nome do Arquivo Original", 300, Windows.Forms.HorizontalAlignment.Left)
-            tlvMain.Columns.Add("Novo Nome do Arquivo", 250, Windows.Forms.HorizontalAlignment.Left)
+            tlvMain.Columns.Add("Original Filename", 300, Windows.Forms.HorizontalAlignment.Left)
+            tlvMain.Columns.Add("New Filename", 250, Windows.Forms.HorizontalAlignment.Left)
             tlvMain.Columns.Add("IDW?", 50, Windows.Forms.HorizontalAlignment.Center)
-            tlvMain.Columns.Add("Biblioteca?", 50, Windows.Forms.HorizontalAlignment.Center)
-            tlvMain.Columns.Add("Caminho Completo", 150, Windows.Forms.HorizontalAlignment.Left)
+            tlvMain.Columns.Add("Library?", 50, Windows.Forms.HorizontalAlignment.Center)
+            tlvMain.Columns.Add("Complete Filepath", 150, Windows.Forms.HorizontalAlignment.Left)
 
             'Loads the data 
             LoadTree()
@@ -75,13 +75,13 @@ Public Class frmAssemblyTools
             Dim s As Long
             s = DirSize(d)
             If s > 1073741824 Then
-                lblBkp.Text = "Pasta bkp (" & Trim(Str(Int(s * 10 / 1073741824) / 10)) & " GB):"
+                lblBkp.Text = "Backup Folder (" & Trim(Str(Int(s * 10 / 1073741824) / 10)) & " GB):"
             Else
-                lblBkp.Text = "Pasta bkp (" & Trim(Str(Int(s * 10 / 1048576) / 10)) & " MB):"
+                lblBkp.Text = "Backup Folder (" & Trim(Str(Int(s * 10 / 1048576) / 10)) & " MB):"
             End If
 
         Catch ex As Exception
-            WriteErrorLine(ex, "==========Erro ao abrir o form AssemblyTools==========")
+            WriteErrorLine(ex, "==========[L84] Error opening the batch renamer form (frmAssemblyTools)==========")
         End Try
     End Sub
 
@@ -141,7 +141,7 @@ Public Class frmAssemblyTools
         Try
             DocumentoAtual = ThisApplication.ActiveDocument
             If IsNothing(DocumentoAtual) Then
-                MsgBox("Não há nenhum documento aberto!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Erro")
+                MsgBox("No current open documents!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Error")
                 Me.Close()
                 Exit Sub
             End If
@@ -194,11 +194,11 @@ Public Class frmAssemblyTools
                     NewNode.SubItems.Add(Element.CaminhoCompleto)
                 Next
             Else
-                MsgBox("O documento aberto não é uma montagem!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Erro")
+                MsgBox("The current document is not an assembly!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Error")
                 Me.Close()
             End If
         Catch ex As Exception
-            WriteErrorLine(ex, "==========Erro genérico ao carregar a árvore da montagem==========")
+            WriteErrorLine(ex, "==========[L201] Generic error loading the assembly tree==========")
         End Try
     End Sub
 
@@ -211,7 +211,7 @@ Public Class frmAssemblyTools
         Try
             findIDW = FileIO.FileSystem.FileExists(IDWFullFileNameOut)
         Catch ex As Exception
-            WriteErrorLine(ex, "==========Erro durante a checagem de IDW no arquivo " & NomeArquivoIDW & "==========")
+            WriteErrorLine(ex, "==========[L214] Error checking the IDW in the file " & NomeArquivoIDW & "==========")
         End Try
     End Function
 
@@ -221,8 +221,8 @@ Public Class frmAssemblyTools
         Dim TempString As String
 
         Try
-            If MsgBox("Você tem certeza? Esta ação é irreversível!", vbYesNo, "Confirmação") = vbYes Then
-                Me.Text = "Ferramentas de Montagem - Fazendo Pack and Go..."
+            If MsgBox("Are you sure? You will not be able to undo this action!", vbYesNo, "Confirmation") = vbYes Then
+                Me.Text = "Batch Renamer - Performing Pack and Go..."
                 Dim itemsToModify As Long
                 itemsToModify = 0
 
@@ -237,14 +237,14 @@ Public Class frmAssemblyTools
                     End If
                 Next
 
-                If itemsToModify = 0 Then MsgBox("Não há nada a ser modificado!", vbOKOnly, "Sem ações")
+                If itemsToModify = 0 Then MsgBox("Nothing to change!", vbOKOnly, "No action")
 
                 ThisApplication.SilentOperation = True
                 'Performs a pack and go
                 Dim Res As String
                 Res = CreatePackAndGo()
                 If Res = "" Then
-                    If MsgBox("Erro! O Pack and Go não pôde ser criado. Abortar?", vbYesNo, "Erro do Pack and Go") = vbYes Then
+                    If MsgBox("Error! The Pack and Go files couldn't be created. Abort?", vbYesNo, "Pack and Go error") = vbYes Then
                         Exit Sub
                     End If
                 End If
@@ -252,7 +252,7 @@ Public Class frmAssemblyTools
                 '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Does the shit~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
                 '============Copies files==========
-                Me.Text = "Ferramentas de Montagem - Copiando arquivos..."
+                Me.Text = "Batch Renamer - Copying Files..."
                 'First creates an empty drawing document (the empty drawing)
                 Dim EmptyDrawing As Inventor.DrawingDocument
                 Dim EmptyDrawingFullFileName As String = ""
@@ -264,7 +264,7 @@ Public Class frmAssemblyTools
                         EmptyDrawing.SaveAs(EmptyDrawingFullFileName, True)
                         EmptyDrawing.Close()
                     Catch ex As Exception
-                        WriteErrorLine(ex, "==========Erro ao criar arquivo de desenho vazio==========")
+                        WriteErrorLine(ex, "==========[L267] Error creating a new empty drawing file==========")
                         chkDesenhosVazios.Checked = False
                     End Try
                 End If
@@ -298,11 +298,11 @@ Public Class frmAssemblyTools
                                     End If
                                 End If
                             Catch ex As Exception
-                                WriteErrorLine(ex, "==========Erro ao tentar copiar ou fazer IDW do arquivo " & ListContents(I).CaminhoCompleto & " para " & ListContents(I).NovoCaminhoCompleto & "==========")
+                                WriteErrorLine(ex, "==========[L301] Error trying to copy the original file or trying to generate a new IDW file from " & ListContents(I).CaminhoCompleto & " to " & ListContents(I).NovoCaminhoCompleto & "==========")
                             End Try
                         End If
                     End If
-                    TempString = "Ferramentas de Montagem - Copiando arquivos... " & Trim(Str(I + 1)) & "/" & Trim(Str(UBound(ListContents) + 1))
+                    TempString = "Batch Renamer - Copying Files... " & Trim(Str(I + 1)) & "/" & Trim(Str(UBound(ListContents) + 1))
                     Me.Text = TempString
                 Next
                 If chkDesenhosVazios.Checked Then
@@ -310,7 +310,7 @@ Public Class frmAssemblyTools
                 End If
 
                 '==============Replaces all the references in the parts/assemblies===================
-                Me.Text = "Ferramentas de Montagem - Refazendo Referências nas Cópias (Parts/Assemblies)..."
+                Me.Text = "Batch Renamer - Redoing References inside Copied Files (Parts/Assemblies)..."
                 Dim drawingDoc As Inventor._Document
                 Dim optionsOpen As Inventor.NameValueMap
                 optionsOpen = ThisApplication.TransientObjects.CreateNameValueMap
@@ -329,7 +329,7 @@ Public Class frmAssemblyTools
                                 drawingDoc = ThisApplication.Documents.OpenWithOptions(ListContents(I).CaminhoCompleto, optionsOpen, False)
                             End If
                         Catch ex As Exception
-                            WriteErrorLine(ex, "==========Erro ao tentar abrir arquivo" & ListContents(I).CaminhoCompleto & " ou " & ListContents(I).NovoCaminhoCompleto & "==========")
+                            WriteErrorLine(ex, "==========[L332] Error trying to open the file " & ListContents(I).CaminhoCompleto & " or " & ListContents(I).NovoCaminhoCompleto & "==========")
                         End Try
 
                         'replaces the required references in the copy according to the new list
@@ -342,7 +342,7 @@ Public Class frmAssemblyTools
                                             Try
                                                 refDoc.ReferencedFileDescriptor.ReplaceReference(ListContents(J).NovoCaminhoCompleto)
                                             Catch ex As Exception
-                                                WriteErrorLine(ex, "==========Erro ao tentar substituir referência de " & refDoc.ReferencedFileDescriptor.FullFileName & " para " & ListContents(J).NovoCaminhoCompleto & "==========")
+                                                WriteErrorLine(ex, "==========[L345] Error trying to replace reference from " & refDoc.ReferencedFileDescriptor.FullFileName & " to " & ListContents(J).NovoCaminhoCompleto & "==========")
                                             End Try
                                         End If
                                     End If
@@ -353,12 +353,12 @@ Public Class frmAssemblyTools
                         drawingDoc.Close()
                         'End If
                     End If
-                    TempString = "Ferramentas de Montagem - Refazendo Referências nas Cópias (Parts/Assemblies)..." & Trim(Str(I + 1)) & "/" & Trim(Str(UBound(ListContents) + 1))
+                    TempString = "Batch Renamer - Redoing References inside Copied Files (Parts/Assemblies)..." & Trim(Str(I + 1)) & "/" & Trim(Str(UBound(ListContents) + 1))
                     Me.Text = TempString
                 Next
 
                 'Goes through all the referenced files in the assembly and replaces the references in the assembly
-                Me.Text = "Ferramentas de Montagem - Refazendo Referências na Montagem Atual..."
+                Me.Text = "Batch Renamer - Relinking References on the Top-Level Assembly..."
                 Try
                     K = 0
                     For Each Docum As Inventor.DocumentDescriptor In AssemblyAtual.ReferencedDocumentDescriptors
@@ -370,22 +370,22 @@ Public Class frmAssemblyTools
                                         Try
                                             Docum.ReferencedFileDescriptor.ReplaceReference(ListContents(J).NovoCaminhoCompleto)
                                         Catch ex As Exception
-                                            WriteErrorLine(ex, "==========Erro ao tentar substituir referência de " & Docum.ReferencedFileDescriptor.FullFileName & " para " & ListContents(J).NovoCaminhoCompleto & "==========")
+                                            WriteErrorLine(ex, "==========[L373] Error trying to replace reference from " & Docum.ReferencedFileDescriptor.FullFileName & " to " & ListContents(J).NovoCaminhoCompleto & "==========")
                                         End Try
                                     End If
                                 End If
                             End If
                         Next
                         K = K + 1
-                        TempString = "Ferramentas de Montagem - Refazendo Referências na Montagem Atual..." & Trim(Str(K + 1)) & "/" & Trim(Str(AssemblyAtual.ReferencedDocumentDescriptors.Count))
+                        TempString = "Batch Renamer - Relinking References on the Top-Level Assembly..." & Trim(Str(K + 1)) & "/" & Trim(Str(AssemblyAtual.ReferencedDocumentDescriptors.Count))
                         Me.Text = TempString
                     Next
                 Catch ex As Exception
-                    WriteErrorLine(ex, "==========Erro genérico na substituição de referência==========")
+                    WriteErrorLine(ex, "==========[L384] Generic reference replacement error==========")
                 End Try
 
                 '==============Replaces all the references in the drawings===================
-                Me.Text = "Ferramentas de Montagem - Refazendo Referências nas Cópias (Drawings)..."
+                Me.Text = "Batch Renamer - Redoing References on the Drawing Files (IDWs)..."
 
                 For I = 0 To UBound(ListContents)
                     'For each file in the list:
@@ -409,7 +409,7 @@ Public Class frmAssemblyTools
                                                         Try
                                                             refDoc.ReferencedFileDescriptor.ReplaceReference(ListContents(J).NovoCaminhoCompleto)
                                                         Catch ex As Exception
-                                                            WriteErrorLine(ex, "==========Erro ao tentar substituir referência de " & refDoc.ReferencedFileDescriptor.FullFileName & " para " & ListContents(J).NovoCaminhoCompleto & "==========")
+                                                            WriteErrorLine(ex, "==========[L412] Error trying to replace reference from " & refDoc.ReferencedFileDescriptor.FullFileName & " to " & ListContents(J).NovoCaminhoCompleto & "==========")
                                                         End Try
                                                     End If
                                                 End If
@@ -423,18 +423,18 @@ Public Class frmAssemblyTools
                             End If
                         End If
                     End If
-                    TempString = "Ferramentas de Montagem - Refazendo Referências nas Cópias (Drawings)..." & Trim(Str(I + 1)) & "/" & Trim(Str(UBound(ListContents) + 1))
+                    TempString = "Batch Renamer - Redoing References on the Drawing Files (IDWs)..." & Trim(Str(I + 1)) & "/" & Trim(Str(UBound(ListContents) + 1))
                     Me.Text = TempString
                 Next
 
 
                 '============Saves assembly=============
-                Me.Text = "Ferramentas de Montagem - Salvando a Montagem Atual..."
+                Me.Text = "Batch Renamer - Saving the Top Level Assembly..."
                 AssemblyAtual.Update2()
                 AssemblyAtual.Save2()
 
                 '==========Deletes files=============
-                Me.Text = "Ferramentas de Montagem - Deletando Arquivos Antigos..."
+                Me.Text = "Batch Renamer - Deleting Old Files..."
                 Try
                     For I = 0 To UBound(ListContents)
                         If Not ((ListContents(I).IsLibrary And Not (chkLibraryAccess.Checked))) Then
@@ -447,25 +447,25 @@ Public Class frmAssemblyTools
                                 End If
                             End If
                         End If
-                        TempString = "Ferramentas de Montagem - Deletando Arquivos Antigos..." & Trim(Str(I + 1)) & "/" & Trim(Str(UBound(ListContents) + 1))
+                        TempString = "Batch Renamer - Deleting Old Files..." & Trim(Str(I + 1)) & "/" & Trim(Str(UBound(ListContents) + 1))
                         Me.Text = TempString
                     Next
                 Catch ex As Exception
-                    WriteErrorLine(ex, "==========Erro ao tentar deletar os arquivos==========")
+                    WriteErrorLine(ex, "==========[L454] Error trying to delete original files (old names)==========")
                 End Try
 
-                Me.Text = "Ferramentas de Montagem"
-                MsgBox("Itens modificados com sucesso." & vbNewLine & Trim(Str(itemsToModify)) & " arquivos potencialmente foram alterados.", vbInformation + vbOKOnly, "Sucesso")
+                Me.Text = "Batch Renamer"
+                MsgBox("Operation completed successfully." & vbNewLine & Trim(Str(itemsToModify)) & " files were renamed and relinked.", vbInformation + vbOKOnly, "Sucess")
 
                 Me.Close()
             End If
         Catch ex As Exception
             MsgBox(ex.ToString)
-            WriteErrorLine(ex, "==========Erro ao tentar aplicar os vínculos.==========")
+            WriteErrorLine(ex, "==========[L464] Error trying to replace the references.==========")
         End Try
 
         If Not IsNothing(ErrorLog) Then
-            MsgBox("Ocorreram erros durante a execução." & vbNewLine & "Favor verificar o arquivo ErrorLog.txt na pasta da montagem.")
+            MsgBox("Errors occured during the operation." & vbNewLine & "Please review carefully the Errorlog.txt file inside the assembly root folder to check the errors that occured.")
             ThisApplication.SilentOperation = False
             Me.Close()
         End If
@@ -485,7 +485,7 @@ Public Class frmAssemblyTools
             My.Settings.PackAndGoPath = selPath
             My.Settings.Save()
         Catch ex As Exception
-            WriteErrorLine(ex, "==========Erro ao tentar editar o caminho de saída do Pack and Go==========")
+            WriteErrorLine(ex, "==========[L488] Error trying to edit the output path of the Pack and Go folder==========")
         End Try
     End Sub
 
@@ -550,9 +550,9 @@ Public Class frmAssemblyTools
             PeG.CreatePackage()
             CreatePackAndGo = newPath
         Catch ex As Exception
-            WriteErrorLine(ex, "==========Erro ao tentar fazer o Pack and Go==========")
-            MsgBox("Não foi possível realizar o Pack and Go. Confira se a pasta" & vbCrLf & " existe e se as permissões de usuário podem acessá-la." & vbCrLf &
-                    "Descrição do erro:" & vbCrLf & ex.Message, vbCritical + vbOKOnly, "Erro no PackAndGo")
+            WriteErrorLine(ex, "==========[L553] Error occured while trying to perform the Pack and Go operation==========")
+            MsgBox("Couldn't perform the Pack and Go operation. Please review whether the given folder" & vbCrLf & " exists e whether this program has user permission to access it." & vbCrLf &
+                    "Error description:" & vbCrLf & ex.Message, vbCritical + vbOKOnly, "PackAndGo Error")
             CreatePackAndGo = ""
         End Try
     End Function
@@ -564,7 +564,7 @@ Public Class frmAssemblyTools
 
         Try
             For Each selnode In tlvMain.SelectedItems
-                newName = InputBox("Entre o nomo nome deste arquivo", "Renomear arquivo")
+                newName = InputBox("Please enter a new name for this file", "Rename file")
 
                 If ValidarNomeArquivo(newName) Then
                     selnode.Font = New System.Drawing.Font(selnode.Font, System.Drawing.FontStyle.Bold)
@@ -577,11 +577,11 @@ Public Class frmAssemblyTools
 
                     If selnode.SubItems(2).Text = "True" Then selnode.ForeColor = System.Drawing.Color.Red
                 Else
-                    MsgBox("Nome de Arquivo Inválido!", vbOKOnly, "Erro ao renomear")
+                    MsgBox("Invalid filename!", vbOKOnly, "Renaming error")
                 End If
             Next
         Catch ex As Exception
-            WriteErrorLine(ex, "==========Erro ao marcar arquivo para renomeação==========")
+            WriteErrorLine(ex, "==========[L584] Error when tagging a file to be renamed==========")
         End Try
 
     End Sub
@@ -600,7 +600,7 @@ Public Class frmAssemblyTools
                 ListContents(selnode.Index).NovoCaminhoCompletoIDW = ""
             Next
         Catch ex As Exception
-            WriteErrorLine(ex, "==========Erro ao tentar remover renomeamento de arquivo==========")
+            WriteErrorLine(ex, "==========[L603] Error trying to remove a renaming file tag==========")
         End Try
     End Sub
 
@@ -673,7 +673,7 @@ Public Class frmAssemblyTools
                                 IncompleteCSV = True
                         End If
                     Catch ex As Exception
-                        WriteErrorLine(ex, "==========Erro ao ler dados do arquivo CSV==========")
+                        WriteErrorLine(ex, "==========[L676] Error trying to read a CSV file==========")
                     End Try
                 End While
             End Using
@@ -715,7 +715,7 @@ Public Class frmAssemblyTools
                 For Each i As Long In NonMatchList
                     NonMatchString = NonMatchString & RowsToAdd.Item(i).NomeArquivoOriginal & " para " & RowsToAdd.Item(i).NovoNomeArquivo & vbNewLine
                 Next
-                MsgBox("Os arquivos abaixo não foram adicionados por não terem correspondência na lista da montagem ou por serem duplicados:" & vbNewLine & vbNewLine & NonMatchString)
+                MsgBox("The following files weren't added because they don't have corresponding files in the assembly parts list or because there were duplicates:" & vbNewLine & vbNewLine & NonMatchString)
             End If
 
         End If
@@ -736,7 +736,7 @@ Public Class frmAssemblyTools
             ErrorLog.Write(vbNewLine)
             ErrorLog.Write(vbNewLine)
         Catch x As Exception
-            'This is so bad!!!
+            'This is so bad!!! I don't know what to do then... =P
         End Try
     End Sub
 
@@ -763,18 +763,18 @@ Public Class frmAssemblyTools
     End Sub
 
     Private Sub cmdPurge_Click(sender As Object, e As EventArgs) Handles cmdPurge.Click
-        If MsgBox("Atenção: Esta ação deletará o conteúdo da pasta:" & vbNewLine & txtBkpPath.Text & vbNewLine & "Prosseguir?", vbYesNo + vbCritical, "Purgar") = vbYes Then
+        If MsgBox("CAUTION: This action will DELETE the contents of the folder:" & vbNewLine & txtBkpPath.Text & vbNewLine & "Proceed?", vbYesNo + vbCritical, "Purger") = vbYes Then
             Try
                 If System.IO.Directory.Exists(txtBkpPath.Text) Then
                     If (System.IO.Path.GetPathRoot(txtBkpPath.Text) <> txtBkpPath.Text) And (Environment.SystemDirectory <> txtBkpPath.Text) Then
                         System.IO.Directory.Delete(txtBkpPath.Text, True)
                         System.IO.Directory.CreateDirectory(txtBkpPath.Text)
-                        MsgBox("Pasta purgada com sucesso!", vbOKOnly, "Purgar")
-                        lblBkp.Text = "Pasta bkp (0 MB):"
+                        MsgBox("Folder purged successfuly.", vbOKOnly, "Purger")
+                        lblBkp.Text = "Backup Folder (0 MB):"
                     End If
                 End If
             Catch ex As Exception
-                WriteErrorLine(ex, "==========Erro ao purgar os arquivos da pasta de backup (Pack and Go)==========")
+                WriteErrorLine(ex, "==========[L777] Error trying to purge the backup Pack and Go folder==========")
             End Try
         End If
     End Sub
@@ -817,10 +817,10 @@ Public Class frmAssemblyTools
             ' My.Computer.FileSystem.CopyDirectory(Path, FileSavePath & "\" & LastFolder, True)
             My.Computer.FileSystem.CopyDirectory(Path, FileSavePath, True)
 
-            MsgBox("Parabéns! Você fez o Pack & Go com sucesso!" & vbCrLf & "AGORA VOLTE AO TRABALHO.")
+            MsgBox("Congratulations! You performed the Pack and Go operation successfuly." & vbCrLf & "NOW BACK TO WORK!")
 
         Catch ex As Exception
-            MsgBox("Erro na cópia dos arquivos. Possivelmente o caminho dos arquivos está longo demais (>248 caracteres)." & vbCrLf & vbCrLf & ex.ToString)
+            MsgBox("File copy error. It is possible the new full filenames (plus path) is too long (>248 caracteres). Error string below:" & vbCrLf & vbCrLf & ex.ToString)
         End Try
     End Sub
 

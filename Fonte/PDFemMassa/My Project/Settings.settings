@@ -37,7 +37,7 @@
     <Setting Name="LocaisPadraoPesquisa" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;string&gt;C:\Users\cooling\Desktop\obras\9000529 - VRTM+IF - JBS - Passo Fundo - RS\Refrigeração\122 - Resfriador Beaudelot\02 - BE2-14X36X3000&lt;/string&gt;
+  &lt;string&gt;C:&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
     <Setting Name="PesquisarPrimeiro" Type="System.Boolean" Scope="User">
@@ -134,7 +134,7 @@
       <Value Profile="(Default)">C:\Temp</Value>
     </Setting>
     <Setting Name="IDWTemplatePath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">I:\</Value>
+      <Value Profile="(Default)">C:\</Value>
     </Setting>
     <Setting Name="chkCopyDrawing" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

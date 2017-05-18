@@ -53,3 +53,21 @@ I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDF
 I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\obj\Debug\PDFemMassa.vbproj.ResolveComReference.cache
 I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\bin\WinControls.ListView.dll
 I:\07 - SOFTWARES\02 - Desenvolvimento de Softwares\002 - PDF em Massa\Fonte\PDFemMassa\bin\WinControls.ListView.xml
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.vbprojResolveAssemblyReference.cache
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\Interop.Microsoft.Office.Core.dll
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.vbproj.ResolveComReference.cache
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmAssemblyTools.resources
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmPesquisarArquivos.resources
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmListaArquivos.resources
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmInicio.resources
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmOpcoesGeral.resources
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.frmPesquisa.resources
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.Resources.resources
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.vbproj.GenerateResource.Cache
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.dll
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\.xml
+D:\GitHub Projects\Ferramentas-de-Montagem\Fonte\PDFemMassa\obj\Debug\PDFemMassa.pdb
+C:\Program Files\Autodesk\Inventor 2016\Bin\PDFemMassa.dll.config
+C:\Program Files\Autodesk\Inventor 2016\Bin\PDFemMassa.dll
+C:\Program Files\Autodesk\Inventor 2016\Bin\PDFemMassa.pdb
+C:\Program Files\Autodesk\Inventor 2016\Bin\.xml

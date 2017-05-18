@@ -22,37 +22,37 @@ Partial Class frmInicio
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInicio))
-        Me.OrigemArquivos = New System.Windows.Forms.GroupBox
-        Me.cmdListaArquivos = New System.Windows.Forms.Button
-        Me.optArquivosSelecionados = New System.Windows.Forms.RadioButton
-        Me.optEstaSecao = New System.Windows.Forms.RadioButton
-        Me.DestinoArquivos = New System.Windows.Forms.GroupBox
-        Me.txtCaminhoPasta = New System.Windows.Forms.TextBox
-        Me.cmdEscolherPasta = New System.Windows.Forms.Button
-        Me.optPastaSelecionada = New System.Windows.Forms.RadioButton
-        Me.optPastaOrigem = New System.Windows.Forms.RadioButton
-        Me.TiposArquivo = New System.Windows.Forms.GroupBox
-        Me.cmdOpcoesDWG = New System.Windows.Forms.Button
+        Me.OrigemArquivos = New System.Windows.Forms.GroupBox()
+        Me.cmdListaArquivos = New System.Windows.Forms.Button()
+        Me.optArquivosSelecionados = New System.Windows.Forms.RadioButton()
+        Me.optEstaSecao = New System.Windows.Forms.RadioButton()
+        Me.DestinoArquivos = New System.Windows.Forms.GroupBox()
+        Me.txtCaminhoPasta = New System.Windows.Forms.TextBox()
+        Me.cmdEscolherPasta = New System.Windows.Forms.Button()
+        Me.optPastaSelecionada = New System.Windows.Forms.RadioButton()
+        Me.optPastaOrigem = New System.Windows.Forms.RadioButton()
+        Me.TiposArquivo = New System.Windows.Forms.GroupBox()
+        Me.cmdOpcoesDWG = New System.Windows.Forms.Button()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.chkPlanifDXF = New System.Windows.Forms.CheckBox
-        Me.chkDWG = New System.Windows.Forms.CheckBox
-        Me.chkDXF = New System.Windows.Forms.CheckBox
-        Me.chkPDF = New System.Windows.Forms.CheckBox
-        Me.GrupoImprimir = New System.Windows.Forms.GroupBox
-        Me.cmdOpcoesImpressao = New System.Windows.Forms.Button
-        Me.cmbImpressoras2 = New System.Windows.Forms.ComboBox
-        Me.chkImprimir2 = New System.Windows.Forms.CheckBox
-        Me.cmbImpressoras = New System.Windows.Forms.ComboBox
-        Me.chkImprimir = New System.Windows.Forms.CheckBox
-        Me.pgbProgresso = New System.Windows.Forms.ProgressBar
-        Me.cmdCancelar = New System.Windows.Forms.Button
-        Me.cmdExecutar = New System.Windows.Forms.Button
-        Me.cmdOpcoes = New System.Windows.Forms.Button
+        Me.chkPlanifDXF = New System.Windows.Forms.CheckBox()
+        Me.chkDWG = New System.Windows.Forms.CheckBox()
+        Me.chkDXF = New System.Windows.Forms.CheckBox()
+        Me.chkPDF = New System.Windows.Forms.CheckBox()
+        Me.GrupoImprimir = New System.Windows.Forms.GroupBox()
+        Me.cmdOpcoesImpressao = New System.Windows.Forms.Button()
+        Me.cmbImpressoras2 = New System.Windows.Forms.ComboBox()
+        Me.chkImprimir2 = New System.Windows.Forms.CheckBox()
+        Me.cmbImpressoras = New System.Windows.Forms.ComboBox()
+        Me.chkImprimir = New System.Windows.Forms.CheckBox()
+        Me.pgbProgresso = New System.Windows.Forms.ProgressBar()
+        Me.cmdCancelar = New System.Windows.Forms.Button()
+        Me.cmdExecutar = New System.Windows.Forms.Button()
+        Me.cmdOpcoes = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.DialogoPasta = New System.Windows.Forms.FolderBrowserDialog
-        Me.lblProgresso = New System.Windows.Forms.Label
+        Me.DialogoPasta = New System.Windows.Forms.FolderBrowserDialog()
+        Me.lblProgresso = New System.Windows.Forms.Label()
         Me.OrigemArquivos.SuspendLayout()
         Me.DestinoArquivos.SuspendLayout()
         Me.TiposArquivo.SuspendLayout()
@@ -69,7 +69,7 @@ Partial Class frmInicio
         Me.OrigemArquivos.Size = New System.Drawing.Size(222, 98)
         Me.OrigemArquivos.TabIndex = 0
         Me.OrigemArquivos.TabStop = False
-        Me.OrigemArquivos.Text = "Origem dos Arquivos"
+        Me.OrigemArquivos.Text = "Files to be Exported"
         '
         'cmdListaArquivos
         '
@@ -77,8 +77,8 @@ Partial Class frmInicio
         Me.cmdListaArquivos.Name = "cmdListaArquivos"
         Me.cmdListaArquivos.Size = New System.Drawing.Size(110, 26)
         Me.cmdListaArquivos.TabIndex = 1
-        Me.cmdListaArquivos.Text = "Lista de &Arquivos..."
-        Me.ToolTip1.SetToolTip(Me.cmdListaArquivos, "Abre uma janela para você selecionar os arquivos que quer imprimir.")
+        Me.cmdListaArquivos.Text = "File List..."
+        Me.ToolTip1.SetToolTip(Me.cmdListaArquivos, "Opens a window to select files to export/print.")
         Me.cmdListaArquivos.UseVisualStyleBackColor = True
         '
         'optArquivosSelecionados
@@ -86,10 +86,10 @@ Partial Class frmInicio
         Me.optArquivosSelecionados.AutoSize = True
         Me.optArquivosSelecionados.Location = New System.Drawing.Point(13, 41)
         Me.optArquivosSelecionados.Name = "optArquivosSelecionados"
-        Me.optArquivosSelecionados.Size = New System.Drawing.Size(131, 17)
+        Me.optArquivosSelecionados.Size = New System.Drawing.Size(76, 17)
         Me.optArquivosSelecionados.TabIndex = 0
-        Me.optArquivosSelecionados.Text = "Ar&quivos selecionados"
-        Me.ToolTip1.SetToolTip(Me.optArquivosSelecionados, "Exporta os arquivos selecionados.")
+        Me.optArquivosSelecionados.Text = "&Select files"
+        Me.ToolTip1.SetToolTip(Me.optArquivosSelecionados, "Exports the selected files in the list accessible by the button below.")
         Me.optArquivosSelecionados.UseVisualStyleBackColor = True
         '
         'optEstaSecao
@@ -98,11 +98,11 @@ Partial Class frmInicio
         Me.optEstaSecao.Checked = True
         Me.optEstaSecao.Location = New System.Drawing.Point(13, 18)
         Me.optEstaSecao.Name = "optEstaSecao"
-        Me.optEstaSecao.Size = New System.Drawing.Size(168, 17)
+        Me.optEstaSecao.Size = New System.Drawing.Size(108, 17)
         Me.optEstaSecao.TabIndex = 0
         Me.optEstaSecao.TabStop = True
-        Me.optEstaSecao.Text = "&Drawings abertos nesta seção"
-        Me.ToolTip1.SetToolTip(Me.optEstaSecao, "Exporta os arquivos de desenho já abertos no inventor.")
+        Me.optEstaSecao.Text = "All open drawings"
+        Me.ToolTip1.SetToolTip(Me.optEstaSecao, "Exports the open drawings in this session.")
         Me.optEstaSecao.UseVisualStyleBackColor = True
         '
         'DestinoArquivos
@@ -116,7 +116,7 @@ Partial Class frmInicio
         Me.DestinoArquivos.Size = New System.Drawing.Size(222, 131)
         Me.DestinoArquivos.TabIndex = 1
         Me.DestinoArquivos.TabStop = False
-        Me.DestinoArquivos.Text = "Destino dos Arquivos"
+        Me.DestinoArquivos.Text = "Exported Files Destination"
         '
         'txtCaminhoPasta
         '
@@ -132,8 +132,8 @@ Partial Class frmInicio
         Me.cmdEscolherPasta.Name = "cmdEscolherPasta"
         Me.cmdEscolherPasta.Size = New System.Drawing.Size(110, 26)
         Me.cmdEscolherPasta.TabIndex = 1
-        Me.cmdEscolherPasta.Text = "Es&colher Pasta..."
-        Me.ToolTip1.SetToolTip(Me.cmdEscolherPasta, "Abre uma janela para escolher a pasta a salvar os arquivos.")
+        Me.cmdEscolherPasta.Text = "Choose Folder..."
+        Me.ToolTip1.SetToolTip(Me.cmdEscolherPasta, "Opens a window to choose the target folder.")
         Me.cmdEscolherPasta.UseVisualStyleBackColor = True
         '
         'optPastaSelecionada
@@ -141,11 +141,11 @@ Partial Class frmInicio
         Me.optPastaSelecionada.AutoSize = True
         Me.optPastaSelecionada.Location = New System.Drawing.Point(13, 42)
         Me.optPastaSelecionada.Name = "optPastaSelecionada"
-        Me.optPastaSelecionada.Size = New System.Drawing.Size(112, 17)
+        Me.optPastaSelecionada.Size = New System.Drawing.Size(96, 17)
         Me.optPastaSelecionada.TabIndex = 0
         Me.optPastaSelecionada.TabStop = True
-        Me.optPastaSelecionada.Text = "Pas&ta selecionada"
-        Me.ToolTip1.SetToolTip(Me.optPastaSelecionada, "Salva todos os arquivos na mesma pasta selecionada.")
+        Me.optPastaSelecionada.Text = "Selected folder"
+        Me.ToolTip1.SetToolTip(Me.optPastaSelecionada, "Save all files to the same selected folder.")
         Me.optPastaSelecionada.UseVisualStyleBackColor = True
         '
         'optPastaOrigem
@@ -154,11 +154,13 @@ Partial Class frmInicio
         Me.optPastaOrigem.Checked = True
         Me.optPastaOrigem.Location = New System.Drawing.Point(13, 19)
         Me.optPastaOrigem.Name = "optPastaOrigem"
-        Me.optPastaOrigem.Size = New System.Drawing.Size(190, 17)
+        Me.optPastaOrigem.Size = New System.Drawing.Size(172, 17)
         Me.optPastaOrigem.TabIndex = 0
         Me.optPastaOrigem.TabStop = True
-        Me.optPastaOrigem.Text = "Mesma pasta de &origem do arquivo"
-        Me.ToolTip1.SetToolTip(Me.optPastaOrigem, "Salvará os arquivos no mesmo local de origem dos arquivos fonte.")
+        Me.optPastaOrigem.Text = "Same folder as the original file's"
+        Me.ToolTip1.SetToolTip(Me.optPastaOrigem, "Saves the exported files to the same folder as the original files belonged." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(In " &
+        "the case they belong to multiple folders, each exported file will be in " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "the co" &
+        "rresponding folder)")
         Me.optPastaOrigem.UseVisualStyleBackColor = True
         '
         'TiposArquivo
@@ -173,7 +175,7 @@ Partial Class frmInicio
         Me.TiposArquivo.Size = New System.Drawing.Size(188, 140)
         Me.TiposArquivo.TabIndex = 3
         Me.TiposArquivo.TabStop = False
-        Me.TiposArquivo.Text = "Tipos de Arquivo"
+        Me.TiposArquivo.Text = "Export File Types"
         '
         'cmdOpcoesDWG
         '
@@ -184,7 +186,7 @@ Partial Class frmInicio
         Me.cmdOpcoesDWG.Name = "cmdOpcoesDWG"
         Me.cmdOpcoesDWG.Size = New System.Drawing.Size(93, 32)
         Me.cmdOpcoesDWG.TabIndex = 1
-        Me.cmdOpcoesDWG.Text = "Opções..."
+        Me.cmdOpcoesDWG.Text = "Options..."
         Me.cmdOpcoesDWG.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ToolTip1.SetToolTip(Me.cmdOpcoesDWG, "Configurações para exportação...")
         Me.cmdOpcoesDWG.UseVisualStyleBackColor = True
@@ -202,10 +204,10 @@ Partial Class frmInicio
         Me.chkPlanifDXF.AutoSize = True
         Me.chkPlanifDXF.Location = New System.Drawing.Point(13, 109)
         Me.chkPlanifDXF.Name = "chkPlanifDXF"
-        Me.chkPlanifDXF.Size = New System.Drawing.Size(172, 17)
+        Me.chkPlanifDXF.Size = New System.Drawing.Size(116, 17)
         Me.chkPlanifDXF.TabIndex = 0
-        Me.chkPlanifDXF.Text = "&Exportar Planif. Chapa em DXF"
-        Me.ToolTip1.SetToolTip(Me.chkPlanifDXF, "Exporta a Planificação dos Desenhos que contém Chapas em DXF.")
+        Me.chkPlanifDXF.Text = "&Flat Pattern to DXF"
+        Me.ToolTip1.SetToolTip(Me.chkPlanifDXF, "Exports the flat pattern of the IDWs that contain sheet metal files" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "to DXF.")
         Me.chkPlanifDXF.UseVisualStyleBackColor = True
         '
         'chkDWG
@@ -216,7 +218,7 @@ Partial Class frmInicio
         Me.chkDWG.Size = New System.Drawing.Size(53, 17)
         Me.chkDWG.TabIndex = 0
         Me.chkDWG.Text = "D&WG"
-        Me.ToolTip1.SetToolTip(Me.chkDWG, "Exporta arquivos em formato DWG.")
+        Me.ToolTip1.SetToolTip(Me.chkDWG, "When checked will export the files to DWG.")
         Me.chkDWG.UseVisualStyleBackColor = True
         '
         'chkDXF
@@ -227,7 +229,7 @@ Partial Class frmInicio
         Me.chkDXF.Size = New System.Drawing.Size(47, 17)
         Me.chkDXF.TabIndex = 0
         Me.chkDXF.Text = "D&XF"
-        Me.ToolTip1.SetToolTip(Me.chkDXF, "Exporta arquivos em formato DXF.")
+        Me.ToolTip1.SetToolTip(Me.chkDXF, "When checked will export the files to DXF.")
         Me.chkDXF.UseVisualStyleBackColor = True
         '
         'chkPDF
@@ -238,7 +240,7 @@ Partial Class frmInicio
         Me.chkPDF.Size = New System.Drawing.Size(47, 17)
         Me.chkPDF.TabIndex = 0
         Me.chkPDF.Text = "&PDF"
-        Me.ToolTip1.SetToolTip(Me.chkPDF, "Exporta arquivos em formato PDF.")
+        Me.ToolTip1.SetToolTip(Me.chkPDF, "When checked will export the files to PDF.")
         Me.chkPDF.UseVisualStyleBackColor = True
         '
         'GrupoImprimir
@@ -253,7 +255,7 @@ Partial Class frmInicio
         Me.GrupoImprimir.Size = New System.Drawing.Size(188, 155)
         Me.GrupoImprimir.TabIndex = 4
         Me.GrupoImprimir.TabStop = False
-        Me.GrupoImprimir.Text = "Imprimir"
+        Me.GrupoImprimir.Text = "Print"
         '
         'cmdOpcoesImpressao
         '
@@ -261,8 +263,8 @@ Partial Class frmInicio
         Me.cmdOpcoesImpressao.Name = "cmdOpcoesImpressao"
         Me.cmdOpcoesImpressao.Size = New System.Drawing.Size(134, 24)
         Me.cmdOpcoesImpressao.TabIndex = 2
-        Me.cmdOpcoesImpressao.Text = "Opções de &Impressão..."
-        Me.ToolTip1.SetToolTip(Me.cmdOpcoesImpressao, "Abre uma janela com as opções de impressão.")
+        Me.cmdOpcoesImpressao.Text = "Print Options..."
+        Me.ToolTip1.SetToolTip(Me.cmdOpcoesImpressao, "Opens a print settings window.")
         Me.cmdOpcoesImpressao.UseVisualStyleBackColor = True
         '
         'cmbImpressoras2
@@ -273,6 +275,7 @@ Partial Class frmInicio
         Me.cmbImpressoras2.Name = "cmbImpressoras2"
         Me.cmbImpressoras2.Size = New System.Drawing.Size(160, 21)
         Me.cmbImpressoras2.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.cmbImpressoras2, "Selects the printer to print the files on.")
         '
         'chkImprimir2
         '
@@ -281,9 +284,10 @@ Partial Class frmInicio
         Me.chkImprimir2.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chkImprimir2.Location = New System.Drawing.Point(13, 72)
         Me.chkImprimir2.Name = "chkImprimir2"
-        Me.chkImprimir2.Size = New System.Drawing.Size(139, 17)
+        Me.chkImprimir2.Size = New System.Drawing.Size(87, 17)
         Me.chkImprimir2.TabIndex = 0
-        Me.chkImprimir2.Text = "Imprimir na Impressora &2"
+        Me.chkImprimir2.Text = "Use Printer &2"
+        Me.ToolTip1.SetToolTip(Me.chkImprimir2, "Prints the files in the Printer 2 (selectable below)")
         Me.chkImprimir2.UseVisualStyleBackColor = True
         '
         'cmbImpressoras
@@ -294,17 +298,17 @@ Partial Class frmInicio
         Me.cmbImpressoras.Name = "cmbImpressoras"
         Me.cmbImpressoras.Size = New System.Drawing.Size(160, 21)
         Me.cmbImpressoras.TabIndex = 1
-        Me.ToolTip1.SetToolTip(Me.cmbImpressoras, "Selecione a impressora a receber os comandos.")
+        Me.ToolTip1.SetToolTip(Me.cmbImpressoras, "Selects the printer to print the files on.")
         '
         'chkImprimir
         '
         Me.chkImprimir.AutoSize = True
         Me.chkImprimir.Location = New System.Drawing.Point(13, 19)
         Me.chkImprimir.Name = "chkImprimir"
-        Me.chkImprimir.Size = New System.Drawing.Size(139, 17)
+        Me.chkImprimir.Size = New System.Drawing.Size(87, 17)
         Me.chkImprimir.TabIndex = 0
-        Me.chkImprimir.Text = "Imprimir na Impressora &1"
-        Me.ToolTip1.SetToolTip(Me.chkImprimir, "Imprime os arquivos na impressora selecionada.")
+        Me.chkImprimir.Text = "Use Printer &1"
+        Me.ToolTip1.SetToolTip(Me.chkImprimir, "Prints the files in the Printer 1 (selectable below)")
         Me.chkImprimir.UseVisualStyleBackColor = True
         '
         'pgbProgresso
@@ -323,7 +327,7 @@ Partial Class frmInicio
         Me.cmdCancelar.Name = "cmdCancelar"
         Me.cmdCancelar.Size = New System.Drawing.Size(108, 33)
         Me.cmdCancelar.TabIndex = 6
-        Me.cmdCancelar.Text = "&Cancelar"
+        Me.cmdCancelar.Text = "&Cancel"
         Me.ToolTip1.SetToolTip(Me.cmdCancelar, "Fecha esta janela.")
         Me.cmdCancelar.UseVisualStyleBackColor = True
         '
@@ -333,7 +337,7 @@ Partial Class frmInicio
         Me.cmdExecutar.Name = "cmdExecutar"
         Me.cmdExecutar.Size = New System.Drawing.Size(137, 33)
         Me.cmdExecutar.TabIndex = 6
-        Me.cmdExecutar.Text = "&Executar"
+        Me.cmdExecutar.Text = "&Start"
         Me.ToolTip1.SetToolTip(Me.cmdExecutar, "Executa a exportação/impressão dos arquivos conforme configuração.")
         Me.cmdExecutar.UseVisualStyleBackColor = True
         '
@@ -343,7 +347,7 @@ Partial Class frmInicio
         Me.cmdOpcoes.Name = "cmdOpcoes"
         Me.cmdOpcoes.Size = New System.Drawing.Size(79, 33)
         Me.cmdOpcoes.TabIndex = 6
-        Me.cmdOpcoes.Text = "&Opções..."
+        Me.cmdOpcoes.Text = "&Settings..."
         Me.ToolTip1.SetToolTip(Me.cmdOpcoes, "Abre uma janela com as opções do programa.")
         Me.cmdOpcoes.UseVisualStyleBackColor = True
         '
@@ -352,9 +356,9 @@ Partial Class frmInicio
         Me.lblProgresso.AutoSize = True
         Me.lblProgresso.Location = New System.Drawing.Point(14, 320)
         Me.lblProgresso.Name = "lblProgresso"
-        Me.lblProgresso.Size = New System.Drawing.Size(63, 13)
+        Me.lblProgresso.Size = New System.Drawing.Size(57, 13)
         Me.lblProgresso.TabIndex = 7
-        Me.lblProgresso.Text = "Progresso: -"
+        Me.lblProgresso.Text = "Progress: -"
         '
         'frmInicio
         '
@@ -379,7 +383,7 @@ Partial Class frmInicio
         Me.Name = "frmInicio"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Assistente de Exportação V0.2"
+        Me.Text = "Batch Exporter V0.2"
         Me.OrigemArquivos.ResumeLayout(False)
         Me.OrigemArquivos.PerformLayout()
         Me.DestinoArquivos.ResumeLayout(False)

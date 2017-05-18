@@ -115,9 +115,9 @@ Public Class frmInicio
         'Se não existe arquivo de inicialização para DWG/DXF, então nem começa!
         If (chkDWG.Checked Or chkDXF.Checked) And (My.Settings.DWGIniFile = "" Or _
                                 (Not System.IO.File.Exists(My.Settings.DWGIniFile))) Then
-            MsgBox("Arquivo de Configuraçãoes DWG/DXF não encontrado!" & vbCrLf & vbCrLf & _
-                    "Selecione um arquivo de configurações nas opções do programa!", _
-                    MsgBoxStyle.Critical Or MsgBoxStyle.OkOnly, "Erro crítico!")
+            MsgBox("DWG/DXF config file not found!" & vbCrLf & vbCrLf &
+                    "You need to select in the settings window a DWG/DXF config file!",
+                    MsgBoxStyle.Critical Or MsgBoxStyle.OkOnly, "Critical Error!")
 
             GoTo Final
         End If
@@ -133,7 +133,7 @@ Public Class frmInicio
             Next
 
             'Zera a progressbar
-            lblProgresso.Text = "Executando... 0/" & Trim(Str(QtdArquivosSelecionados))
+            lblProgresso.Text = "Executing... 0/" & Trim(Str(QtdArquivosSelecionados))
             pgbProgresso.Value = 0
             pgbProgresso.Maximum = QtdArquivosSelecionados
 
@@ -160,8 +160,8 @@ Public Class frmInicio
                     TempoExecucao = Int(TimerFim - TimerIni)
                     StrTempoExecucao = Trim(Str(Int(TempoExecucao / 60))) & ":" & _
                                             Trim(Str(TempoExecucao - Int(TempoExecucao / 60) * 60))
-                    MsgBox("Execução interrompida pelo usuário!" & vbCrLf & "Performance: " & _
-                        Trim(Str(ArquivoSelecionadoAtual)) & " Arquivos em " & StrTempoExecucao)
+                    MsgBox("Task cancelled by the user!" & vbCrLf & "Performance: " &
+                        Trim(Str(ArquivoSelecionadoAtual)) & " Files in " & StrTempoExecucao)
                     Exit Sub
                 End If
 
@@ -193,7 +193,7 @@ Public Class frmInicio
                 End If
 
                 'Atualiza a progressbar
-                lblProgresso.Text = "Executando... " & Trim(Str(ArquivoSelecionadoAtual)) _
+                lblProgresso.Text = "Executing... " & Trim(Str(ArquivoSelecionadoAtual)) _
                                                 & "/" & Trim(Str(QtdArquivosSelecionados))
                 pgbProgresso.Value = ArquivoSelecionadoAtual
 
@@ -201,7 +201,7 @@ Public Class frmInicio
             Next
 
             'Atualiza a progressbar
-            lblProgresso.Text = "Parado."
+            lblProgresso.Text = "Idle."
             pgbProgresso.Value = 0
 
         ElseIf optEstaSecao.Checked Then
@@ -216,7 +216,7 @@ Public Class frmInicio
             Next
 
             'Zera a progressbar
-            lblProgresso.Text = "Executando... 0/" & Trim(Str(QtdArquivosSelecionados))
+            lblProgresso.Text = "Executing... 0/" & Trim(Str(QtdArquivosSelecionados))
             pgbProgresso.Value = 0
             ArquivoSelecionadoAtual = 0
             pgbProgresso.Maximum = QtdArquivosSelecionados
@@ -230,8 +230,8 @@ Public Class frmInicio
                         TempoExecucao = Int(TimerFim - TimerIni)
                         StrTempoExecucao = Trim(Str(Int(TempoExecucao / 60))) & ":" & _
                                                 Trim(Str(TempoExecucao - Int(TempoExecucao / 60) * 60))
-                        MsgBox("Execução interrompida pelo usuário!" & vbCrLf & "Performance: " & _
-                            Trim(Str(ArquivoSelecionadoAtual)) & " Arquivos em " & StrTempoExecucao)
+                        MsgBox("Task cancelled by the user!" & vbCrLf & "Performance: " &
+                            Trim(Str(ArquivoSelecionadoAtual)) & " Files in " & StrTempoExecucao)
                         GoTo Final
                     End If
 
@@ -248,7 +248,7 @@ Public Class frmInicio
                     ArquivoSelecionadoAtual = ArquivoSelecionadoAtual + 1
 
                     'Atualiza a Progressbar
-                    lblProgresso.Text = "Executando... " & Trim(Str(ArquivoSelecionadoAtual)) _
+                    lblProgresso.Text = "Executing... " & Trim(Str(ArquivoSelecionadoAtual)) _
                                                     & "/" & Trim(Str(QtdArquivosSelecionados))
                     pgbProgresso.Value = ArquivoSelecionadoAtual
 
@@ -265,8 +265,8 @@ Public Class frmInicio
         TempoExecucao = Int(TimerFim - TimerIni)
         StrTempoExecucao = Trim(Str(Int(TempoExecucao / 60))) & ":" & _
                                 Trim(Str(TempoExecucao - Int(TempoExecucao / 60) * 60))
-        MsgBox("Execução completada com sucesso!" & vbCrLf & "Performance: " & _
-            Trim(Str(ArquivoSelecionadoAtual)) & " Arquivos em " & StrTempoExecucao)
+        MsgBox("Task completed successfully!" & vbCrLf & "Performance: " &
+            Trim(Str(ArquivoSelecionadoAtual)) & " Files in " & StrTempoExecucao)
 
         ThisApplication.SilentOperation = False
 
@@ -292,7 +292,7 @@ Final:
         ThisApplication = PDFemMassa.StandardAddInServer.m_inventorApplication
 
         'Coloca na progress bar o texto correto
-        lblProgresso.Text = "Parado."
+        lblProgresso.Text = "Idle."
         pgbProgresso.Value = 0
 
         'Primeiro Grupo de Comandos: Origem dos Arquivos
@@ -427,7 +427,7 @@ Grupo2:
             AddinPDF.SaveCopyAs(Documento, PDFContext, PDFOptions, PDFDataMedium)
 
         Catch ex As Exception
-            MsgBox("Um erro ocorreu!!" & vbCrLf & "Descrição do Erro: " & ex.ToString)
+            MsgBox("Unhandled Exception!" & vbCrLf & "Error Description String: " & ex.ToString)
             CriaPDF = False
             Exit Function
         End Try
@@ -456,7 +456,7 @@ Grupo2:
             AddinDWG.SaveCopyAs(Documento, DWGContext, DWGOptions, DWGDataMedium)
 
         Catch ex As Exception
-            MsgBox("Um erro ocorreu!!" & vbCrLf & "Descrição do Erro: " & ex.ToString)
+            MsgBox("Unhandled Exception!" & vbCrLf & "Error Description String: " & ex.ToString)
             CriaDWG = False
             Exit Function
         End Try
@@ -486,7 +486,7 @@ Grupo2:
             AddinDXF.SaveCopyAs(Documento, DXFContext, DXFOptions, DXFDataMedium)
 
         Catch ex As Exception
-            MsgBox("Um erro ocorreu!!" & vbCrLf & "Descrição do Erro: " & ex.ToString)
+            MsgBox("Unhandled Exception" & vbCrLf & "Error Description String: " & ex.ToString)
             CriaDXF = False
             Exit Function
         End Try
@@ -532,7 +532,7 @@ Grupo2:
             Next
 
         Catch ex As Exception
-            MsgBox("Um erro ocorreu!!" & vbCrLf & "Descrição do Erro: " & ex.ToString)
+            MsgBox("Unhandled Exception!" & vbCrLf & "Error Description String: " & ex.ToString)
             PlanificaDXF = False
             Exit Function
         End Try
@@ -634,7 +634,7 @@ Grupo2:
             Next
 
         Catch ex As Exception
-            MsgBox("Um erro ocorreu!!" & vbCrLf & "Descrição do Erro: " & ex.ToString)
+            MsgBox("Unhandled Exception!" & vbCrLf & "Error Description String: " & ex.ToString)
             Imprime = False
             Exit Function
         End Try

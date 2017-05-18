@@ -32,10 +32,10 @@ Public Class frmListaArquivos
             lstArquivos.Columns.Clear()
 
             lstArquivos.Columns.Add("Check", "", 50, Windows.Forms.HorizontalAlignment.Left, 9999)
-            lstArquivos.Columns.Add("NomeArq", "Nome do Arquivo", 120, Windows.Forms.HorizontalAlignment.Left, 9999)
-            lstArquivos.Columns.Add("CaminhoArq", "Localização", 100, Windows.Forms.HorizontalAlignment.Left, 9999)
-            lstArquivos.Columns.Add("Formato", "Formato", 110, Windows.Forms.HorizontalAlignment.Center, 9999)
-            lstArquivos.Columns.Add("PosImpr", "Posição Impr.", 80, Windows.Forms.HorizontalAlignment.Center, 9999)
+            lstArquivos.Columns.Add("NomeArq", "Filename", 120, Windows.Forms.HorizontalAlignment.Left, 9999)
+            lstArquivos.Columns.Add("CaminhoArq", "Filepath", 100, Windows.Forms.HorizontalAlignment.Left, 9999)
+            lstArquivos.Columns.Add("Formato", "Format", 110, Windows.Forms.HorizontalAlignment.Center, 9999)
+            lstArquivos.Columns.Add("PosImpr", "Print Orient.", 80, Windows.Forms.HorizontalAlignment.Center, 9999)
 
 
             'Cria as variáveis que representam a posição e o tamanho dos componentes
@@ -50,7 +50,7 @@ Public Class frmListaArquivos
             Dim I As Integer
 
             ItemDeMenu = New Forms.ToolStripMenuItem
-            ItemDeMenu.Text = "Configuração Definida"
+            ItemDeMenu.Text = "Default Config"
             ItemDeMenu.Name = "mnuConfigDef"
 
             mniFormato.DropDownItems.Add(ItemDeMenu)
@@ -92,13 +92,13 @@ Public Class frmListaArquivos
                     Item.SubItems.Add(ListaArquivos(I).CaminhoCompleto)
                     'Formato de Folha
                     If ListaArquivos(I).FormatoPredefinido Then
-                        Item.SubItems.Add("Predefinido")
+                        Item.SubItems.Add("Default")
                     Else
                         Item.SubItems.Add(My.Settings.LabelsPapel(ListaArquivos(I).FormatoPos))
                     End If
                     'Posição de Impressão
                     If ListaArquivos(I).PosicaoPredefinida Then
-                        Item.SubItems.Add("Predefinida")
+                        Item.SubItems.Add("Default")
                     Else
                         Item.SubItems.Add(ListaArquivos(I).Posicao)
                     End If
@@ -197,7 +197,7 @@ Public Class frmListaArquivos
 
         If CallingObject.Name = "mnuConfigDef" Then
             For Each ItemDeLista In lstArquivos.SelectedItems
-                ItemDeLista.SubItems(3).Text = "Predefinido"
+                ItemDeLista.SubItems(3).Text = "Default"
             Next
         ElseIf CallingObject.Name = "mnuOpcoesFormato" Then
             Dim Form As New frmOpcoesGeral
@@ -233,7 +233,7 @@ Public Class frmListaArquivos
     Private Sub mnuPosImprPredef_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuPosImprPredef.Click
         Dim Item As Forms.ListViewItem
         For Each Item In lstArquivos.SelectedItems
-            Item.SubItems(4).Text = "Predefinida"
+            Item.SubItems(4).Text = "Default"
         Next
     End Sub
 
@@ -275,7 +275,7 @@ Public Class frmListaArquivos
                 'Caminho Completo
                 Buffer(I).CaminhoCompleto = Item.SubItems(2).Text
                 'Formato de Folha
-                If Item.SubItems(3).Text = "Predefinido" Then
+                If Item.SubItems(3).Text = "Default" Then
                     Buffer(I).FormatoPredefinido = True
                     Buffer(I).FormatoAltura = vbNullString
                     Buffer(I).FormatoLargura = vbNullString
@@ -292,7 +292,7 @@ Public Class frmListaArquivos
                     Buffer(I).FormatoUnidades = Unid
                 End If
                 'Posição de Impressão
-                If Item.SubItems(4).Text = "Predefinida" Then
+                If Item.SubItems(4).Text = "Default" Then
                     Buffer(I).PosicaoPredefinida = True
                     Buffer(I).Posicao = vbNullString
                 Else
@@ -333,8 +333,8 @@ Public Class frmListaArquivos
 
     Private Sub cmdPesquisa_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdPesquisa.Click
         If txtPesquisa.Text = vbNullString Then
-            MsgBox("A pesquisa deve conter algum valor!", MsgBoxStyle.OkOnly Or _
-                    MsgBoxStyle.Critical, "Não é possível pesquisar")
+            MsgBox("Search for a non-empty value!", MsgBoxStyle.OkOnly Or
+                    MsgBoxStyle.Critical, "Error")
         Else
             frmPesquisa.Pesquisa = txtPesquisa.Text
             Dim Form As New frmPesquisa
@@ -378,7 +378,7 @@ Public Class frmListaArquivos
         Try
             DocumentoAtual = ThisApplication.ActiveDocument
             If IsNothing(DocumentoAtual) Then
-                MsgBox("Não há nenhum documento aberto!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Erro")
+                MsgBox("No files open in the current session!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Error")
                 Exit Sub
             End If
 
@@ -427,12 +427,12 @@ Public Class frmListaArquivos
                     End If
                 Next
 
-                MsgBox("Foram adicionados " & Str(ArquivosAdicionados) & " arquivos de um total de" & Str(NFiles) & " referências contidas nesta montagem." & _
-                       vbCrLf & "Os documentos listados não têm desenho relacionado a eles:" & vbCrLf & ListaArquivosNaoAdicionados, _
+                MsgBox(Str(ArquivosAdicionados) & " files were added out of a total " & Str(NFiles) & " referenced files in this assembly." &
+                       vbCrLf & "The following documents have no drawing file with the same filename associated:" & vbCrLf & ListaArquivosNaoAdicionados,
                        MsgBoxStyle.Information)
 
             Else
-                MsgBox("O documento aberto não é uma montagem!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Erro")
+                MsgBox("The current document is not an assembly!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Error")
             End If
         Catch ex As Exception
             MsgBox(ex.ToString & vbCrLf & ex.Message)
@@ -455,8 +455,8 @@ Public Class frmListaArquivos
 
         ItemdeLista.SubItems.Add(NomeDoArquivo(CaminhoCompleto))
         ItemdeLista.SubItems.Add(CaminhoCompleto)
-        ItemdeLista.SubItems.Add("Predefinido")
-        ItemdeLista.SubItems.Add("Predefinida")
+        ItemdeLista.SubItems.Add("Default")
+        ItemdeLista.SubItems.Add("Default")
         ItemdeLista.Checked = True
 
         'Coloca o ícone

@@ -39,7 +39,7 @@ Public Class frmPesquisarArquivos
         'Inicia a pesquisa para cada um dos campos da tabela
         If cmdPesquisa.ImageIndex = 0 Then
             cmdPesquisa.ImageIndex = 1
-            cmdPesquisa.Text = "&Cancelar Pesquisa"
+            cmdPesquisa.Text = "&Cancel Search"
             'Inicia a Pesquisa
             Cancelar = False
             ArquivosEncontrados = 0
@@ -84,12 +84,12 @@ Public Class frmPesquisarArquivos
 
             'Terminou a pesquisa!
             cmdPesquisa.ImageIndex = 0
-            cmdPesquisa.Text = "Iniciar &Pesquisa"
+            cmdPesquisa.Text = "Start Search"
             lblTempo.Text = "Resultados da Pesquisa - Pesquisa Finalizada"
 
         Else
             cmdPesquisa.ImageIndex = 0
-            cmdPesquisa.Text = "Iniciar &Pesquisa"
+            cmdPesquisa.Text = "Start Search"
             lblTempo.Text = "Resultados da Pesquisa - Pesquisa Cancelada."
 
             'Cancela a Pesquisa
@@ -303,7 +303,7 @@ Public Class frmPesquisarArquivos
         Try
             ValorColado = Clipboard.GetText(1)
         Catch ex As Exception
-            MsgBox("Não foi Possível colar o texto!")
+            MsgBox("Error while pasting from clipboard!")
             Exit Sub
         End Try
 

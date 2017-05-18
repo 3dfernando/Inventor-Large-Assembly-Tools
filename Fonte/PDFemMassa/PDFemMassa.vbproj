@@ -37,7 +37,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>C:\Program Files\Autodesk\Inventor 2014\Bin\</OutputPath>
+    <OutputPath>C:\Program Files\Autodesk\Inventor 2016\Bin\</OutputPath>
     <DocumentationFile>.xml</DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
     <DefineDebug>true</DefineDebug>

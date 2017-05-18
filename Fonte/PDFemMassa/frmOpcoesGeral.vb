@@ -409,22 +409,22 @@
         'Faz as checagens antes de fazer o cadastro!
 
         If InStr(txtDescricao.Text, "(") > 0 Or InStr(txtDescricao.Text, ")") > 0 Then
-            MsgBox("A descrição não pode conter parênteses!", MsgBoxStyle.OkOnly, _
-                   "Erro de sintaxe!")
+            MsgBox("No parentheses on the description!", MsgBoxStyle.OkOnly,
+                   "Syntax error!")
             txtDescricao.Focus()
             Exit Sub
         End If
 
         If Val(txtAltura.Text) <= 0 Then
-            MsgBox("A altura deve ser um número real e maior que zero!", MsgBoxStyle.OkOnly, _
-                   "Erro de sintaxe!")
+            MsgBox("The paper height must be larger than zero!", MsgBoxStyle.OkOnly,
+                   "Syntax error")
             txtAltura.Focus()
             Exit Sub
         End If
 
         If Val(txtLargura.Text) <= 0 Then
-            MsgBox("A largura deve ser um número real e maior que zero!", MsgBoxStyle.OkOnly, _
-                   "Erro de sintaxe!")
+            MsgBox("The paper width must be larger than zero!", MsgBoxStyle.OkOnly,
+                   "Syntax error!")
             txtLargura.Focus()
             Exit Sub
         End If
@@ -554,8 +554,8 @@
             'Testa se o diretório selecionado não é subpasta de qualquer dos diretórios já criados
             For Each TempDir In SettingsLocaisPesquisaTemp
                 If InStr(CaminhoSelecionado, TempDir) Then
-                    MsgBox("A pasta selecionada já existe ou é subpasta de uma das pastas existentes!", _
-                        MsgBoxStyle.OkOnly Or MsgBoxStyle.Critical, "Impossível adicionar")
+                    MsgBox("The selected folder either is already selected or is a subfolder of a folder that has already been selected!",
+                        MsgBoxStyle.OkOnly Or MsgBoxStyle.Critical, "Error adding folder")
                     Exit Sub
                 End If
             Next
@@ -574,12 +574,12 @@
             If PastaContem > 0 Then
                 Dim Res As MsgBoxResult
                 If PastaContem = 1 Then
-                    Res = MsgBox("A pasta selecionada contém uma das pastas existentes como sua subpasta." & _
-                                 vbCrLf & "Deseja excluir as pastas existentes e deixar apenas a pasta selecionada?" _
-                        , MsgBoxStyle.Information Or MsgBoxStyle.YesNoCancel, "Informação")
+                    Res = MsgBox("The selected folder contains a folder already in the list." &
+                                 vbCrLf & "Do you want to delete the existing folders in the list and replace them by the selected folder?" _
+                        , MsgBoxStyle.Information Or MsgBoxStyle.YesNoCancel, "Information")
                 Else
-                    Res = MsgBox("A pasta selecionada contém " & Trim(Str(PastaContem)) & " pastas existentes como sua subpasta." & _
-                                 vbCrLf & "Deseja excluir as pastas existentes e deixar apenas a pasta selecionada?" _
+                    Res = MsgBox("The selected folder contains " & Trim(Str(PastaContem)) & " existing folders as subfolders." &
+                                 vbCrLf & "Do you want to delete the existing folders in the list and replace them by the selected folder?" _
                         , MsgBoxStyle.Information Or MsgBoxStyle.YesNoCancel, "Informação")
                 End If
 

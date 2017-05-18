@@ -99,8 +99,8 @@
         lstArquivosEncontrados.Columns.Clear()
 
         lstArquivosEncontrados.Columns.Add("A", "", 50, Windows.Forms.HorizontalAlignment.Left, 99)
-        lstArquivosEncontrados.Columns.Add("NomeArq", "Nome do Arquivo", 120, Windows.Forms.HorizontalAlignment.Left, 99)
-        lstArquivosEncontrados.Columns.Add("CaminhoArq", "Localização", 160, Windows.Forms.HorizontalAlignment.Left, 99)
+        lstArquivosEncontrados.Columns.Add("NomeArq", "Filename", 120, Windows.Forms.HorizontalAlignment.Left, 99)
+        lstArquivosEncontrados.Columns.Add("CaminhoArq", "Filepath", 160, Windows.Forms.HorizontalAlignment.Left, 99)
 
         'Zera a lista de strings
         ArquivosSelecionados.Clear()

@@ -22,35 +22,35 @@ Partial Class frmListaArquivos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListaArquivos))
-        Me.lstArquivos = New System.Windows.Forms.ListView
+        Me.lstArquivos = New System.Windows.Forms.ListView()
         Me.mnuListaArquivos = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.mniFormato = New System.Windows.Forms.ToolStripMenuItem
-        Me.mniPosicao = New System.Windows.Forms.ToolStripMenuItem
-        Me.mnuPosImprPredef = New System.Windows.Forms.ToolStripMenuItem
-        Me.mniPosImprRetrato = New System.Windows.Forms.ToolStripMenuItem
-        Me.mniPosImprPaisagem = New System.Windows.Forms.ToolStripMenuItem
-        Me.mniSelecionarTudo = New System.Windows.Forms.ToolStripMenuItem
+        Me.mniFormato = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniPosicao = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuPosImprPredef = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniPosImprRetrato = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniPosImprPaisagem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mniSelecionarTudo = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.cmdIncluirArquivos = New System.Windows.Forms.Button
-        Me.cmdIncluirPasta = New System.Windows.Forms.Button
-        Me.DialogPasta = New System.Windows.Forms.FolderBrowserDialog
-        Me.DialogArquivos = New System.Windows.Forms.OpenFileDialog
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.chkSubPastas = New System.Windows.Forms.CheckBox
-        Me.chkIDW = New System.Windows.Forms.CheckBox
-        Me.chkDWG = New System.Windows.Forms.CheckBox
-        Me.cmdSaveClose = New System.Windows.Forms.Button
-        Me.cmdCancelar = New System.Windows.Forms.Button
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.cmdOpcoesPesquisa = New System.Windows.Forms.Button
-        Me.cmdPesquisa = New System.Windows.Forms.Button
-        Me.txtPesquisa = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.cmdPesquisarArquivos = New System.Windows.Forms.Button
+        Me.cmdIncluirArquivos = New System.Windows.Forms.Button()
+        Me.cmdIncluirPasta = New System.Windows.Forms.Button()
+        Me.DialogPasta = New System.Windows.Forms.FolderBrowserDialog()
+        Me.DialogArquivos = New System.Windows.Forms.OpenFileDialog()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.chkSubPastas = New System.Windows.Forms.CheckBox()
+        Me.chkIDW = New System.Windows.Forms.CheckBox()
+        Me.chkDWG = New System.Windows.Forms.CheckBox()
+        Me.cmdSaveClose = New System.Windows.Forms.Button()
+        Me.cmdCancelar = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cmdOpcoesPesquisa = New System.Windows.Forms.Button()
+        Me.cmdPesquisa = New System.Windows.Forms.Button()
+        Me.txtPesquisa = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmdPesquisarArquivos = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.cmdIncluirMontagem = New System.Windows.Forms.Button
+        Me.cmdIncluirMontagem = New System.Windows.Forms.Button()
         Me.mnuListaArquivos.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -135,9 +135,9 @@ Partial Class frmListaArquivos
         Me.cmdIncluirArquivos.Name = "cmdIncluirArquivos"
         Me.cmdIncluirArquivos.Size = New System.Drawing.Size(135, 32)
         Me.cmdIncluirArquivos.TabIndex = 1
-        Me.cmdIncluirArquivos.Text = "Incluir &Desenhos"
+        Me.cmdIncluirArquivos.Text = "Include Drawings"
         Me.cmdIncluirArquivos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolTip1.SetToolTip(Me.cmdIncluirArquivos, "Abre uma janela para você inserir arquivos.")
+        Me.ToolTip1.SetToolTip(Me.cmdIncluirArquivos, "Opens a new window to include individual drawings.")
         Me.cmdIncluirArquivos.UseVisualStyleBackColor = True
         '
         'cmdIncluirPasta
@@ -149,9 +149,9 @@ Partial Class frmListaArquivos
         Me.cmdIncluirPasta.Name = "cmdIncluirPasta"
         Me.cmdIncluirPasta.Size = New System.Drawing.Size(135, 32)
         Me.cmdIncluirPasta.TabIndex = 1
-        Me.cmdIncluirPasta.Text = "Incluir &Pasta"
+        Me.cmdIncluirPasta.Text = "Include a Folder"
         Me.cmdIncluirPasta.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolTip1.SetToolTip(Me.cmdIncluirPasta, "Abre uma janela para você incluir pastas.")
+        Me.ToolTip1.SetToolTip(Me.cmdIncluirPasta, "Opens a folder selection dialog to select a search folder.")
         Me.cmdIncluirPasta.UseVisualStyleBackColor = True
         '
         'DialogArquivos
@@ -177,11 +177,10 @@ Partial Class frmListaArquivos
         Me.chkSubPastas.AutoSize = True
         Me.chkSubPastas.Location = New System.Drawing.Point(8, 50)
         Me.chkSubPastas.Name = "chkSubPastas"
-        Me.chkSubPastas.Size = New System.Drawing.Size(126, 17)
+        Me.chkSubPastas.Size = New System.Drawing.Size(113, 17)
         Me.chkSubPastas.TabIndex = 2
-        Me.chkSubPastas.Text = "P&esquisar SubPastas"
-        Me.ToolTip1.SetToolTip(Me.chkSubPastas, "Permite que seja feita uma pesquisa dentro de todas as subpastas dentro da pasta " & _
-                "selecionada.")
+        Me.chkSubPastas.Text = "Search Subfolders"
+        Me.ToolTip1.SetToolTip(Me.chkSubPastas, "Searches for drawing files inside the" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "subfolders of the selected folder.")
         Me.chkSubPastas.UseVisualStyleBackColor = True
         '
         'chkIDW
@@ -191,10 +190,10 @@ Partial Class frmListaArquivos
         Me.chkIDW.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chkIDW.Location = New System.Drawing.Point(13, 73)
         Me.chkIDW.Name = "chkIDW"
-        Me.chkIDW.Size = New System.Drawing.Size(79, 17)
+        Me.chkIDW.Size = New System.Drawing.Size(86, 17)
         Me.chkIDW.TabIndex = 2
-        Me.chkIDW.Text = "Incluir I&DW"
-        Me.ToolTip1.SetToolTip(Me.chkIDW, "Permite que sejam pesquisados arquivos .idw")
+        Me.chkIDW.Text = "Include I&DW"
+        Me.ToolTip1.SetToolTip(Me.chkIDW, "Allows .IDW files to be included.")
         Me.chkIDW.UseVisualStyleBackColor = True
         '
         'chkDWG
@@ -202,10 +201,10 @@ Partial Class frmListaArquivos
         Me.chkDWG.AutoSize = True
         Me.chkDWG.Location = New System.Drawing.Point(13, 96)
         Me.chkDWG.Name = "chkDWG"
-        Me.chkDWG.Size = New System.Drawing.Size(84, 17)
+        Me.chkDWG.Size = New System.Drawing.Size(91, 17)
         Me.chkDWG.TabIndex = 2
-        Me.chkDWG.Text = "Incluir D&WG"
-        Me.ToolTip1.SetToolTip(Me.chkDWG, "Permite que sejam pesquisados arquivos .dwg")
+        Me.chkDWG.Text = "Include D&WG"
+        Me.ToolTip1.SetToolTip(Me.chkDWG, "Allows .DWG files to be included.")
         Me.chkDWG.UseVisualStyleBackColor = True
         '
         'cmdSaveClose
@@ -214,8 +213,8 @@ Partial Class frmListaArquivos
         Me.cmdSaveClose.Name = "cmdSaveClose"
         Me.cmdSaveClose.Size = New System.Drawing.Size(115, 32)
         Me.cmdSaveClose.TabIndex = 4
-        Me.cmdSaveClose.Text = "&Salvar e Fechar"
-        Me.ToolTip1.SetToolTip(Me.cmdSaveClose, "Salva as modificações e fecha a janela.")
+        Me.cmdSaveClose.Text = "&Save and Close"
+        Me.ToolTip1.SetToolTip(Me.cmdSaveClose, "Saves the changes and closes this window.")
         Me.cmdSaveClose.UseVisualStyleBackColor = True
         '
         'cmdCancelar
@@ -225,8 +224,8 @@ Partial Class frmListaArquivos
         Me.cmdCancelar.Name = "cmdCancelar"
         Me.cmdCancelar.Size = New System.Drawing.Size(115, 32)
         Me.cmdCancelar.TabIndex = 4
-        Me.cmdCancelar.Text = "&Cancelar"
-        Me.ToolTip1.SetToolTip(Me.cmdCancelar, "Cancela e fecha esta janela sem salvar as modificações.")
+        Me.cmdCancelar.Text = "&Cancel"
+        Me.ToolTip1.SetToolTip(Me.cmdCancelar, "Closes this window and doesn't save the changes.")
         Me.cmdCancelar.UseVisualStyleBackColor = True
         '
         'GroupBox2
@@ -251,9 +250,9 @@ Partial Class frmListaArquivos
         Me.cmdOpcoesPesquisa.Name = "cmdOpcoesPesquisa"
         Me.cmdOpcoesPesquisa.Size = New System.Drawing.Size(116, 29)
         Me.cmdOpcoesPesquisa.TabIndex = 2
-        Me.cmdOpcoesPesquisa.Text = "&Opções..."
+        Me.cmdOpcoesPesquisa.Text = "&Search Settings..."
         Me.cmdOpcoesPesquisa.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolTip1.SetToolTip(Me.cmdOpcoesPesquisa, "Abre uma janela com as configurações de pesquisa.")
+        Me.ToolTip1.SetToolTip(Me.cmdOpcoesPesquisa, "Opens a search settings dialog that'll allow you to change the search folders.")
         Me.cmdOpcoesPesquisa.UseVisualStyleBackColor = True
         '
         'cmdPesquisa
@@ -265,9 +264,10 @@ Partial Class frmListaArquivos
         Me.cmdPesquisa.Name = "cmdPesquisa"
         Me.cmdPesquisa.Size = New System.Drawing.Size(116, 29)
         Me.cmdPesquisa.TabIndex = 2
-        Me.cmdPesquisa.Text = "Pesquisa Indiv."
+        Me.cmdPesquisa.Text = "Individual Search"
         Me.cmdPesquisa.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolTip1.SetToolTip(Me.cmdPesquisa, "Pesquisa o texto selecionado.")
+        Me.ToolTip1.SetToolTip(Me.cmdPesquisa, "Searches the search term in the selected search folders." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Changeable through the" &
+        " Settings button below)")
         Me.cmdPesquisa.UseVisualStyleBackColor = True
         '
         'txtPesquisa
@@ -276,16 +276,16 @@ Partial Class frmListaArquivos
         Me.txtPesquisa.Name = "txtPesquisa"
         Me.txtPesquisa.Size = New System.Drawing.Size(119, 20)
         Me.txtPesquisa.TabIndex = 1
-        Me.ToolTip1.SetToolTip(Me.txtPesquisa, "Insira sua pesquisa aqui.")
+        Me.ToolTip1.SetToolTip(Me.txtPesquisa, "Insert your search term here.")
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(6, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(95, 13)
+        Me.Label1.Size = New System.Drawing.Size(69, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Pesquisar Arquivo:"
+        Me.Label1.Text = "Search a file:"
         '
         'cmdPesquisarArquivos
         '
@@ -296,8 +296,9 @@ Partial Class frmListaArquivos
         Me.cmdPesquisarArquivos.Name = "cmdPesquisarArquivos"
         Me.cmdPesquisarArquivos.Size = New System.Drawing.Size(116, 29)
         Me.cmdPesquisarArquivos.TabIndex = 1
-        Me.cmdPesquisarArquivos.Text = "Pesquisa &Múltipla"
+        Me.cmdPesquisarArquivos.Text = "Multiple search"
         Me.cmdPesquisarArquivos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ToolTip1.SetToolTip(Me.cmdPesquisarArquivos, "Performs a search of multiple search terms in the same dialog")
         Me.cmdPesquisarArquivos.UseVisualStyleBackColor = True
         '
         'cmdIncluirMontagem
@@ -309,9 +310,11 @@ Partial Class frmListaArquivos
         Me.cmdIncluirMontagem.Name = "cmdIncluirMontagem"
         Me.cmdIncluirMontagem.Size = New System.Drawing.Size(135, 32)
         Me.cmdIncluirMontagem.TabIndex = 6
-        Me.cmdIncluirMontagem.Text = "&Montagem Atual"
+        Me.cmdIncluirMontagem.Text = "&Include Current Assy"
         Me.cmdIncluirMontagem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolTip1.SetToolTip(Me.cmdIncluirMontagem, "Carrega todos os arquivos referenciados dentro da montagem aberta.")
+        Me.ToolTip1.SetToolTip(Me.cmdIncluirMontagem, "Opens all the drawing files referenced in the current assembly." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "OBS: Only draw" &
+        "ing files whose IDW/DWG filename " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "is the exact same as the IPT/IAM will be adde" &
+        "d")
         Me.cmdIncluirMontagem.UseVisualStyleBackColor = True
         '
         'frmListaArquivos
@@ -330,7 +333,7 @@ Partial Class frmListaArquivos
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmListaArquivos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Arquivos a Exportar"
+        Me.Text = "Files to Export"
         Me.mnuListaArquivos.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
