@@ -221,7 +221,7 @@ Public Class frmAssemblyTools
         Dim TempString As String
 
         Try
-            If MsgBox("Are you sure? You will not be able to undo this action!", vbYesNo, "Confirmation") = vbYes Then
+            If MsgBox("Are you sure? You will not be able to undo this action!" & vbCrLf & "The current assembly will be saved and closed. Continue?", vbYesNo, "Confirmation") = vbYes Then
                 Me.Text = "Batch Renamer - Performing Pack and Go..."
                 Dim itemsToModify As Long
                 itemsToModify = 0
@@ -242,7 +242,7 @@ Public Class frmAssemblyTools
                 ThisApplication.SilentOperation = True
                 'Performs a pack and go
                 Dim Res As String
-                Res = CreatePackAndGo()
+                Res = CreatePackAndGo() '**************************THIS CAUSES AN ERROR IN DEBUG BUT WORKS FINE OUTSIDE THE DEBUG ENVIRONMENT, SO COMMENT OUT FOR DEBUG
                 If Res = "" Then
                     If MsgBox("Error! The Pack and Go files couldn't be created. Abort?", vbYesNo, "Pack and Go error") = vbYes Then
                         Exit Sub
@@ -329,7 +329,7 @@ Public Class frmAssemblyTools
                                 drawingDoc = ThisApplication.Documents.OpenWithOptions(ListContents(I).CaminhoCompleto, optionsOpen, False)
                             End If
                         Catch ex As Exception
-                            WriteErrorLine(ex, "==========[L332] Error trying to open the file " & ListContents(I).CaminhoCompleto & " or " & ListContents(I).NovoCaminhoCompleto & "==========")
+                            WriteErrorLine(ex, "==========[L332] Error trying to open the file " & drawingDoc.FullFileName & "==========")
                         End Try
 
                         'replaces the required references in the copy according to the new list
@@ -359,9 +359,18 @@ Public Class frmAssemblyTools
 
                 'Goes through all the referenced files in the assembly and replaces the references in the assembly
                 Me.Text = "Batch Renamer - Relinking References on the Top-Level Assembly..."
+                'First closes it without saving
+                Dim AssemblyFilePath As String = AssemblyAtual.FullFileName
+                Dim Docum As Inventor.DocumentDescriptor
+
+                AssemblyAtual.Save2()
+                AssemblyAtual.Close(True)
+
+                drawingDoc = ThisApplication.Documents.OpenWithOptions(AssemblyFilePath, optionsOpen, False)
+
                 Try
                     K = 0
-                    For Each Docum As Inventor.DocumentDescriptor In AssemblyAtual.ReferencedDocumentDescriptors
+                    For Each Docum In drawingDoc.ReferencedDocumentDescriptors
                         For J = 0 To UBound(ListContents)
                             'For each file in the list that needs to be replaced:
                             If Not ((ListContents(J).IsLibrary And Not (chkLibraryAccess.Checked))) Then 'Denies modification if not modifying library and is a library item
@@ -370,19 +379,25 @@ Public Class frmAssemblyTools
                                         Try
                                             Docum.ReferencedFileDescriptor.ReplaceReference(ListContents(J).NovoCaminhoCompleto)
                                         Catch ex As Exception
-                                            WriteErrorLine(ex, "==========[L373] Error trying to replace reference from " & Docum.ReferencedFileDescriptor.FullFileName & " to " & ListContents(J).NovoCaminhoCompleto & "==========")
+                                            WriteErrorLine(ex, "==========[L379] Error trying to replace reference from " & Docum.ReferencedFileDescriptor.FullFileName & " to " & ListContents(J).NovoCaminhoCompleto & "==========")
                                         End Try
                                     End If
                                 End If
                             End If
                         Next
                         K = K + 1
-                        TempString = "Batch Renamer - Relinking References on the Top-Level Assembly..." & Trim(Str(K + 1)) & "/" & Trim(Str(AssemblyAtual.ReferencedDocumentDescriptors.Count))
+                        TempString = "Batch Renamer - Relinking References on the Top-Level Assembly..." & Trim(Str(K + 1)) & "/" & Trim(Str(drawingDoc.ReferencedDocumentDescriptors.Count))
                         Me.Text = TempString
                     Next
                 Catch ex As Exception
-                    WriteErrorLine(ex, "==========[L384] Generic reference replacement error==========")
+                    WriteErrorLine(ex, "==========[L390] Generic reference replacement error==========")
                 End Try
+
+                '============Saves assembly=============
+                Me.Text = "Batch Renamer - Saving the Top Level Assembly..."
+                drawingDoc.Update2()
+                drawingDoc.Save2()
+
 
                 '==============Replaces all the references in the drawings===================
                 Me.Text = "Batch Renamer - Redoing References on the Drawing Files (IDWs)..."
@@ -409,7 +424,7 @@ Public Class frmAssemblyTools
                                                         Try
                                                             refDoc.ReferencedFileDescriptor.ReplaceReference(ListContents(J).NovoCaminhoCompleto)
                                                         Catch ex As Exception
-                                                            WriteErrorLine(ex, "==========[L412] Error trying to replace reference from " & refDoc.ReferencedFileDescriptor.FullFileName & " to " & ListContents(J).NovoCaminhoCompleto & "==========")
+                                                            WriteErrorLine(ex, "==========[L424] Error trying to replace reference from " & refDoc.ReferencedFileDescriptor.FullFileName & " to " & ListContents(J).NovoCaminhoCompleto & "==========")
                                                         End Try
                                                     End If
                                                 End If
@@ -428,10 +443,6 @@ Public Class frmAssemblyTools
                 Next
 
 
-                '============Saves assembly=============
-                Me.Text = "Batch Renamer - Saving the Top Level Assembly..."
-                AssemblyAtual.Update2()
-                AssemblyAtual.Save2()
 
                 '==========Deletes files=============
                 Me.Text = "Batch Renamer - Deleting Old Files..."
@@ -439,7 +450,7 @@ Public Class frmAssemblyTools
                     For I = 0 To UBound(ListContents)
                         If Not ((ListContents(I).IsLibrary And Not (chkLibraryAccess.Checked))) Then
                             If ListContents(I).NovoNomeArquivo <> "" Then
-                                If ListContents(I).NovoNomeArquivo <> AssemblyAtual.FullFileName Then 'Cannot delete its own path!!!
+                                If ListContents(I).NovoNomeArquivo <> AssemblyFilePath Then 'Cannot delete its own path!!!
                                     System.IO.File.Delete(ListContents(I).CaminhoCompleto)
                                     If ListContents(I).HasIDW Then
                                         System.IO.File.Delete(ListContents(I).CaminhoCompletoIDW)
@@ -451,7 +462,7 @@ Public Class frmAssemblyTools
                         Me.Text = TempString
                     Next
                 Catch ex As Exception
-                    WriteErrorLine(ex, "==========[L454] Error trying to delete original files (old names)==========")
+                    WriteErrorLine(ex, "==========[L463] Error trying to delete original files (old names)==========")
                 End Try
 
                 Me.Text = "Batch Renamer"

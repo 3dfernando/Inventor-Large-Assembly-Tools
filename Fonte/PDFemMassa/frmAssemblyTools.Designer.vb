@@ -73,19 +73,19 @@ Partial Class frmAssemblyTools
         '
         Me.mnuTreeList.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RenomearArquivoToolStripMenuItem, Me.NãoRenomearArquivoToolStripMenuItem})
         Me.mnuTreeList.Name = "mnuTreeList"
-        Me.mnuTreeList.Size = New System.Drawing.Size(199, 48)
+        Me.mnuTreeList.Size = New System.Drawing.Size(196, 70)
         '
         'RenomearArquivoToolStripMenuItem
         '
         Me.RenomearArquivoToolStripMenuItem.Name = "RenomearArquivoToolStripMenuItem"
-        Me.RenomearArquivoToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
-        Me.RenomearArquivoToolStripMenuItem.Text = "&Renomear Arquivo"
+        Me.RenomearArquivoToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.RenomearArquivoToolStripMenuItem.Text = "Manual Renaming"
         '
         'NãoRenomearArquivoToolStripMenuItem
         '
         Me.NãoRenomearArquivoToolStripMenuItem.Name = "NãoRenomearArquivoToolStripMenuItem"
-        Me.NãoRenomearArquivoToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
-        Me.NãoRenomearArquivoToolStripMenuItem.Text = "&Não Renomear Arquivo"
+        Me.NãoRenomearArquivoToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.NãoRenomearArquivoToolStripMenuItem.Text = "Don't Rename This File"
         '
         'ImageList1
         '
