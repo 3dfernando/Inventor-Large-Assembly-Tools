@@ -11,6 +11,17 @@ for the correct the file paths.
 
 In the case you don't trust the .cmd or it's not working, here's the procedure to install it manually:
 
+####USERS OF INVENTOR 2022:##### 
+###I've been hearing from previous users that the 2022 update of Inventor breaks the add-in. I've not been able to follow up with this project, as I don't have the newest Inventor version. However, one of the users in the community has found a solution:
+
+Go to this key in your registry
+HKEY_CURRENT_USER \ SOFTWARE \ Autodesk \ Inventor \ RegistryVersion26.0 \ System \ Preferences
+> Add DWORD value
+LoadRegisterBasedAddins “= dword: 00000001
+
+Apparently this instructs Inventor to load add-ins like mine, which are based on registry keys.
+################################
+
 1. Make sure you have the Microsoft .NET Framework v4.0.30319 or newer
 2. Make sure you copied the files to the bin folder as described above
 3. Open cmd as administrator
