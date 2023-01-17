@@ -1,4 +1,11 @@
-UPDATE: Quick tutorial I made showing how to install this:
+UPDATE; Jan 2023:
+I've received reports from many users of this add-in that it cannot be installed in Inventor 2022 and up. That's rather unfortunate, and it breaks my heart that Autodesk dropped the support like that. Unfortunately I personally don't have the time (nor the access to Inventor anymore) to update the software to fix this issue. 
+
+Thanks for your kind words of support. Sincerely,
+-Fernando Zigunov
+
+=========================
+Quick tutorial I made showing how to install this:
 https://youtu.be/DyePL7HXSgY
 
 ================================ENGLISH=================================
